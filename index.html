@@ -2,11 +2,230 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <meta name="description" content="Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес.">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gllacy Shop</title>
   </head>
   <body>
+    <!--Шапка -->
+    <header class="page-header">
+      <nav class="site-nav">
+        <a class="site-nav__logo">
+          <img src="" alt="Логотип Gllacy Shop">
+        </a>
+        <ul class="site-nav__main-nav main-nav">
+          <li class="main-nav__item main-nav__item_dropdown">
+            <a href="#">Каталог</a>
+            <ul class="site-nav__sub-nav sub-nav">
+              <li class="sub-nav__item sub-nav__item_special">
+                <a href="">Новинки</a>
+              </li>
+              <li class="sub-nav__item">
+                <a href="" >Сливочное</a>
+              </li>
+              <li class="sub-nav__item">
+                <a href="">Щербеты</a>
+              </li>
+              <li class="sub-nav__item">
+                <a href="">Фруктовый лед</a>
+              </li>
+              <li class="sub-nav__item">
+                <a href="">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">О Компании</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-header__user-nav">
+        <button class="user-nav-btn user-nav-btn_search" href="#">Поиск</button>
+        <!-- Форма поиска -->
+        <div class="popup-search">
+          <form class="form-search" action="" method="get">
+            <input type="search" name="search" placeholder="Что ищем?">
+          </form>
+        </div><!-- Форма поиска -->
+        <button class="user-nav-btn user-nav-btn_auth" href="#">Вход</button>
+        <!-- Форма входа -->
+        <div class="modal-auth">
+          <form class="form-auth" action="" method="post">
+            <div class="form-auth__fields">
+              <input type="text" name="auth" placeholder="Электронная почта">
+              <input type="password" name="password" placeholder="Пароль">
+            </div>
+            <div class="form-auth__footer">
+              <input type="submit" value="Войти" class="form-auth__submit-btn">
+              <div class="form-auth__links">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
+            </div>
+          </form>
+        </div><!-- Форма входа -->
+        <button class="user-nav-btn user-nav-btn_cart" href="#">Пусто</button>
+      </div>
+      <p class="page-header__contacts">
+        С 10 до 20, ежедневно<br>
+        8 812 450-25-25
+      </p>
+    </header>
+    <main class="container">
+      <h1 class="visually-hidden">Магазин мороженого "Глэйси"</h2>
+      <!--Слайдер-товара, переключатель, кнопка ?-->
+      <!--Баннеры -->
+      <section class="promo">
+          <h2 class="visually-hidden">Акции</h2>
+        <article class="promo__item promo-item">
+          <h3 class="promo-item__header">Малинка даром!</h3>
+          <p class="promo-item__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш за</p>
+          <a href="#" class="page-btn promo-item__btn">Хочу варенье!</a>
+        </article>
+        <article class="promo__item promo-item">
+          <h3 class="promo-item__header">Шоколадки даром!</h3>
+          <p class="promo-item__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкусней</p>
+          <a href="#" class="page-btn promo-item__btn">Хочу шоколадки!</a>
+        </article>
+      </section>
+    
+      <!--Хиты -->
+      <section class="hit-products">
+        <h2 class="visually-hidden">Хиты</h2>
+        <ul class="hit-products__list">
+          <li class="hit-products__item">
+            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
+            <h3 class="hit-products__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <p class="hit-products__price">310&#8381;<span>/кг</span></p>
+          </li>
+          <li class="hit-products__item">
+            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
+            <h3 class="hit-products__name">Сливочно-кофейное с кусочками шоколада</h3>
+            <p class="hit-products__price">380&#8381;<span>/кг</span></p>
+          </li>
+          <li class="hit-products__item">
+            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
+            <h3 class="hit-products__name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <p class="hit-products__price">355&#8381;<span>/кг</span></p>
+          </li>
+          <li class="hit-products__item">
+            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
+            <h3 class="hit-products__name">Сливочное крем-брюле с карамельной подливкой</h3>
+            <p class="hit-products__price">415&#8381;<span>/кг</span></p>
+          </li>
+        </ul>
+      </section>
+    
+      <!--Описание и преимущества -->
+      <section class="features">
+        <h2 class="visually-hidden">О нас</h2>
+        <b class="features__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
+        <ul class="features__list">
+          <li class="features__item">
+            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных
+              временем технологий.</p>
+          </li>
+          <li class="features__item">
+            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты
+              и добавки произведены из натурального, экологически чистого сырья.</p>
+          </li>
+          <li class="features__item">
+            <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное
+              сотрудничество.</p>
+          </li>
+          <li class="features__item">
+            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять
+              в пути и позволяет сохранить превосходный вкус.</p>
+          </li>
+        </ul>
+      </section>
+    
+      <!--Статья -->
+      <article class="blog-post">
+        <h2 class="visually-hidden">Блог</h2>
+        <span class="blog-post__text">Новое в нашем блоге</span>
+        <a class="blog-post__title" href="">
+          <h3>10 способов сервировки фруктовых щербетов к столу</h3>
+        </a>
+      </article>
+    
+      <!-- Форма для подписки -->
+      <section class="subscribe">
+        <h2 class="visually-hidden">Подписаться</h2>
+        <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form class="subscribe__form" action="" method="post">
+          <input type="email" name="" placeholder="Электронная почта">
+          <input class="page-btn" type="submit" value="Отправить">
+        </form>
+      </section>
+    
+      <!-- Карта -->
+      <section class="location">
+        <h2 class="visually-hidden">Адрес</h2>
+        <div class="location__map"><!-- сама карта --></div>
+        <div class="location__adress">
+          <p>Адрес главного офиса и офлайн-магазина:
+            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          </p>
+          <p>Для заказов по телефону:
+            <b>8 812 450-25-25</b>
+            (с 10 до 20 ежедневно)
+          </p>
+          <button class="page-btn">Форма обратной связи</button>
+        </div>
+      </section>
+    
+      <!-- Форма обратной связи -->
+      <section class="modal-feedback">
+        <b>Мы обязательно вам ответим!</b>
+        <span class="modal-close">x</span>
+        <form class="form-field" action="" method="post">
+          <div class="form-field__contact">
+            <input type="text" name="" placeholder="Как вас зовут?">
+            <input type="email" name="" placeholder="Ваша почта для ответа?">
+          </div>
+          <textarea class="form-field__message" name="" placeholder="Напишите что-нибудь..." cols="30" rows="10"></textarea>
+          <input class="page-btn" type="submit" value="Отправить">
+        </form>
+      </section><!-- Форма обратной связи -->
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
-  </body>
-</html>
+    </main>
+    <!-- Футер -->
+    <footer class="page-footer">
+      <ul class="page-footer__social-links">
+        <li class="social-btn social-btn--tw">
+          <a href="">Twitter</a>
+        </li>
+        <li class="social-btn social-btn--int">
+          <a href="">Instagram</a>
+        </li>
+        <li class="social-btn social-btn--fb">
+          <a href="">Facebook</a>
+        </li>
+        <li class="social-btn social-btn--vk">
+          <a href="">Вконтакте</a>
+        </li>
+      </ul>
+      <ul class="page-footer__info">
+        <li><a class="info-link" href=""><b>Для поставщиков</b></a></li>
+        <li><a class="info-link" href="">О производстве</a></li>
+        <li><a class="info-link" href="">Наши документы</a></li>
+        <li><a class="info-link" href="">Экологические стандарты</a></li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <img class="copyright__logo" src="" alt="">
+        <span>Сделано в
+          <a class="copyright__link">HTML Academy</a>
+         © 2017</span>
+      </div>
+    </footer>
+    
+    
+    <script src="js/scripts.js"></script>
+    </body>
+    
+    </html>
