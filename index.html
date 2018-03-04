@@ -5,6 +5,7 @@
     <meta name="description" content="Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес.">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Gllacy Shop</title>
   </head>
   <body>
@@ -16,13 +17,13 @@
         </a>
         <ul class="site-nav__main-nav main-nav">
           <li class="main-nav__item main-nav__item_dropdown">
-            <a href="#">Каталог</a>
+            <a href="/catalog.html">Каталог</a>
             <ul class="site-nav__sub-nav sub-nav">
               <li class="sub-nav__item sub-nav__item_special">
                 <a href="">Новинки</a>
               </li>
               <li class="sub-nav__item">
-                <a href="" >Сливочное</a>
+                <a href="">Сливочное</a>
               </li>
               <li class="sub-nav__item">
                 <a href="">Щербеты</a>
@@ -43,41 +44,65 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__user-nav">
-        <button class="user-nav-btn user-nav-btn_search" href="#">Поиск</button>
-        <!-- Форма поиска -->
-        <div class="popup-search">
-          <form class="form-search" action="" method="get">
-            <input type="search" name="search" placeholder="Что ищем?">
-          </form>
-        </div><!-- Форма поиска -->
-        <button class="user-nav-btn user-nav-btn_auth" href="#">Вход</button>
-        <!-- Форма входа -->
-        <div class="modal-auth">
-          <form class="form-auth" action="" method="post">
-            <div class="form-auth__fields">
-              <input type="text" name="auth" placeholder="Электронная почта">
-              <input type="password" name="password" placeholder="Пароль">
-            </div>
-            <div class="form-auth__footer">
-              <input type="submit" value="Войти" class="form-auth__submit-btn">
-              <div class="form-auth__links">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
-              </div>
-            </div>
-          </form>
-        </div><!-- Форма входа -->
-        <button class="user-nav-btn user-nav-btn_cart" href="#">Пусто</button>
+      <div class="user-nav">
+        <a class="user-nav__btn user-nav__btn_search" href="#">Поиск</a>
+        <a class="user-nav__btn user-nav__btn_auth" href="#">Вход</a>
+        <a class="user-nav__btn user-nav__btn_cart" href="#">Пусто</a>
       </div>
-      <p class="page-header__contacts">
-        С 10 до 20, ежедневно<br>
-        8 812 450-25-25
+      <p class="contacts">
+        С 10 до 20, ежедневно
+        <br> 8 812 450-25-25
       </p>
+
+      <!-- Форма поиска -->
+      <div class="popup-search">
+        <form class="form-search" action="" method="get">
+          <input type="search" name="search" placeholder="Что ищем?">
+        </form>
+      </div><!-- Форма поиска -->
+      
+      <!-- Форма входа -->
+      <div class="popup-auth">
+        <form class="form-auth" action="" method="post">
+          <div class="form-auth__fields">
+            <input type="text" name="auth" placeholder="Электронная почта">
+            <input type="password" name="password" placeholder="Пароль">
+          </div>
+          <div class="form-auth__footer">
+            <input class="form-auth__submit-btn" type="submit" value="Войти">
+            <div class="form-auth__links">
+              <a class="popup-link" href="#">Забыли пароль?</a>
+              <a class="popup-link" href="#">Новая регистрация</a>
+            </div>
+          </div>
+        </form>
+      </div><!-- Форма входа -->
+      
     </header>
     <main class="container">
-      <h1 class="visually-hidden">Магазин мороженого "Глэйси"</h2>
-      <!--Слайдер-товара, переключатель, кнопка ?-->
+      <h1 class="visually-hidden">Магазин мороженого "Глэйси"</h1>
+
+      <!--Слайдер-товара, переключатель, кнопка ?
+      <div class="slider">
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <input type="radio" id="btn-2" name="toggle">
+          <input type="radio" id="btn-3" name="toggle">
+        <div class="slider__control">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
+        </div>
+        <div class="slider__inner">
+          <div class="slides">
+            <div class="slides__item">
+              <p class="slides__title">Крем-брюле и пломбир с малиновым джемом</p>
+              <img src="" alt="">
+            </div>
+          </div>
+          <a class="page-btn" href="" >Давайте оба!</a>
+        </div>
+      </div>-->
+
       <!--Баннеры -->
       <section class="promo">
           <h2 class="visually-hidden">Акции</h2>
@@ -98,24 +123,24 @@
         <h2 class="visually-hidden">Хиты</h2>
         <ul class="hit-products__list">
           <li class="hit-products__item">
-            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
             <h3 class="hit-products__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             <p class="hit-products__price">310&#8381;<span>/кг</span></p>
+            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
           </li>
           <li class="hit-products__item">
-            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
             <h3 class="hit-products__name">Сливочно-кофейное с кусочками шоколада</h3>
             <p class="hit-products__price">380&#8381;<span>/кг</span></p>
+            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
           </li>
           <li class="hit-products__item">
-            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
             <h3 class="hit-products__name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
             <p class="hit-products__price">355&#8381;<span>/кг</span></p>
+            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
           </li>
           <li class="hit-products__item">
-            <img src="img/" alt="Фоторафия мороженого" class="hit-products__photo">
             <h3 class="hit-products__name">Сливочное крем-брюле с карамельной подливкой</h3>
             <p class="hit-products__price">415&#8381;<span>/кг</span></p>
+            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
           </li>
         </ul>
       </section>
@@ -166,7 +191,10 @@
       <!-- Карта -->
       <section class="location">
         <h2 class="visually-hidden">Адрес</h2>
-        <div class="location__map"><!-- сама карта --></div>
+        <div class="location__map" id="map">
+          <!-- Карта -->
+        </div>
+        <div class="location__pin">Место на карте</div>
         <div class="location__adress">
           <p>Адрес главного офиса и офлайн-магазина:
             <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
@@ -180,9 +208,9 @@
       </section>
     
       <!-- Форма обратной связи -->
-      <section class="modal-feedback">
+      <div class="modal-feedback">
         <b>Мы обязательно вам ответим!</b>
-        <span class="modal-close">x</span>
+        <button class="modal-close">x</button>
         <form class="form-field" action="" method="post">
           <div class="form-field__contact">
             <input type="text" name="" placeholder="Как вас зовут?">
@@ -191,41 +219,39 @@
           <textarea class="form-field__message" name="" placeholder="Напишите что-нибудь..." cols="30" rows="10"></textarea>
           <input class="page-btn" type="submit" value="Отправить">
         </form>
-      </section><!-- Форма обратной связи -->
+      </div><!-- Форма обратной связи -->
 
     </main>
     <!-- Футер -->
     <footer class="page-footer">
-      <ul class="page-footer__social-links">
-        <li class="social-btn social-btn--tw">
-          <a href="">Twitter</a>
-        </li>
-        <li class="social-btn social-btn--int">
-          <a href="">Instagram</a>
-        </li>
-        <li class="social-btn social-btn--fb">
-          <a href="">Facebook</a>
-        </li>
-        <li class="social-btn social-btn--vk">
-          <a href="">Вконтакте</a>
-        </li>
-      </ul>
-      <ul class="page-footer__info">
-        <li><a class="info-link" href=""><b>Для поставщиков</b></a></li>
-        <li><a class="info-link" href="">О производстве</a></li>
-        <li><a class="info-link" href="">Наши документы</a></li>
-        <li><a class="info-link" href="">Экологические стандарты</a></li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-        <img class="copyright__logo" src="" alt="">
-        <span>Сделано в
-          <a class="copyright__link">HTML Academy</a>
-         © 2017</span>
-      </div>
+        <ul class="footer-social">
+          <li class="social-btn social-btn_tw">
+            <a href="">Twitter</a>
+          </li>
+          <li class="social-btn social-btn_int">
+            <a href="">Instagram</a>
+          </li>
+          <li class="social-btn social-btn_fb">
+            <a href="">Facebook</a>
+          </li>
+          <li class="social-btn social-btn_vk">
+            <a href="">Вконтакте</a>
+          </li>
+        </ul>
+        <ul class="footer-info">
+            <li class="footer-info__item"><a href=""><b>Для поставщиков</b></a></li>
+            <li class="footer-info__item"><a href="">О производстве</a></li>
+            <li class="footer-info__item"><a href="">Наши документы</a></li>
+            <li class="footer-info__item"><a href="">Экологические стандарты</a></li>
+        </ul>
+        <div class="footer-copyright">
+          <img class="footer-copyright__logo" src="" width="108" height="39" alt="Логотип HTML Academy">
+          <p>Сделано в
+            <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+           © 2017</p>
+        </div>
     </footer>
-    
-    
-    <script src="js/scripts.js"></script>
-    </body>
-    
-    </html>
+    <script src="https://api-maps.yandex.ru/2.1-dev/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/location-map.js"></script>
+  </body>
+</html>
