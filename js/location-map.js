@@ -10,7 +10,7 @@ ymaps.ready(function () {
         myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
         }, {
                 iconLayout: 'default#image',
-                iconImageHref: 'img/map-pin.png',
+                iconImageHref: 'img/map-pin.svg',
                 iconImageSize: [80, 140],
                 iconImageOffset: [-40, -140]
             });
