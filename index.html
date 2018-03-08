@@ -12,21 +12,20 @@
   <body>
     <!--Шапка -->
     <header class="page-header container">
-      <div class="page-header__site-nav">
+      <div class="page-header__nav">
         <nav class="site-nav">
           <a class="site-nav__logo">
             <img src="img/gllacyShop-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
           </a>
           <ul class="site-nav__main-nav main-nav">
             <li class="main-nav__item main-nav__item_dropdown">
-              <a class="main-nav__link " href="/catalog.html"><span class="main-nav__item-underline">Каталог</span></a>
+              <a class="main-nav__link " href="catalog.html"><span class="main-nav__item-underline">Каталог</span></a>
               <ul class="site-nav__sub-nav sub-nav">
                 <li class="sub-nav__item sub-nav__item_special">
                   <a class="sub-nav__link" href="">Новинки</a>
                 </li>
-                <hr class="sub-nav__outline">
                 <li class="sub-nav__item">
-                  <a class="sub-nav__link" href="/catalog.html">Сливочное</a>
+                  <a class="sub-nav__link" href="catalog.html">Сливочное</a>
                 </li>
                 <li class="sub-nav__item">
                   <a class="sub-nav__link" href="">Щербеты</a>
@@ -47,41 +46,44 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header__user-nav user-nav">
-          <a class="user-nav__btn user-nav__btn_search" href="#" ></a>
-          <a class="user-nav__btn user-nav__btn_auth" href="#" >Вход</a>
-          <a class="user-nav__btn user-nav__btn_cart" href="#">Пусто</a>
-        </div>
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__btn user-nav__btn_search" href="#"></a>
+          <!-- Форма поиска -->
+            <div class="user-nav__popup popup-search popup popup-hidden">
+              <form class="form-search" action="" method="get">
+                <input class="form-field" type="search" name="search" placeholder="Что ищем?">
+              </form>
+            </div>
+          <!-- Форма поиска -->
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__btn user-nav__btn_auth" role="button" href="#" >Вход</a>
+          <!-- Форма авторизации -->
+            <div class="user-nav__popup popup-auth popup-hidden popup ">
+              <form class="form-auth" action="" method="post">
+                <input class="form-auth__field form-field" type="text" name="auth" placeholder="Электронная почта" required>
+                <input class="form-auth__field form-field" type="password" name="password" placeholder="Пароль" required>
+                <div class="form-auth__footer">
+                  <input class="form-auth__submit-btn page-btn" type="submit" value="Войти">
+                  <div class="form-auth__list-links">
+                    <a class="form-auth__link" href="#">Забыли пароль?</a>
+                    <a class="form-auth__link " href="#">Новая регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          <!-- Форма авторизации -->
+          </li>
+          <li class="user-nav__item">
+              <a class="user-nav__btn user-nav__btn_cart" href="#">Пусто</a>
+          </li>
+        </ul>
       </div>
       <p class="page-header__contacts">
         С 10 до 20, ежедневно<br>
-        <span class="contacts__phone">8 812 450-25-25</span>
+        <span class="page-header__contacts_phone">8 812 450-25-25</span>
       </p>
-
-      <!-- Форма поиска -->
-      <div class="popup-hidden popup-search">
-        <form class="form-search" action="" method="get">
-          <input type="search" name="search" placeholder="Что ищем?">
-        </form>
-      </div>
-      
-    <!-- Форма входа -->
-      <div class="popup-hidden popup-auth" id="myPopup">
-        <form class="form-auth" action="" method="post">
-          <div class="form-auth__fields">
-            <input type="text" name="auth" placeholder="Электронная почта" required>
-            <input type="password" name="password" placeholder="Пароль" required>
-          </div>
-          <div class="form-auth__footer">
-            <input class="form-auth__submit-btn" type="submit" value="Войти">
-            <div class="form-auth__links">
-              <a class="popup-link" href="#">Забыли пароль?</a>
-              <a class="popup-link" href="#">Новая регистрация</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    <!-- Форма входа -->
     </header>
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого "Глэйси"</h1>
@@ -200,7 +202,7 @@
         <h2 class="visually-hidden">Подписаться</h2>
         <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="subscribe__form" action="" method="post">
-          <input type="email" name="" placeholder="Электронная почта">
+          <input class="form-field" type="email" name="" placeholder="Электронная почта">
           <input class="page-btn" type="submit" value="Отправить">
         </form>
       </section>
@@ -227,12 +229,12 @@
       <div class="modal-feedback">
         <b>Мы обязательно вам ответим!</b>
         <button class="modal-close" type="button">x</button>
-        <form class="form-field" action="" method="post">
-          <div class="form-field__contact">
-            <input type="text" name="" placeholder="Как вас зовут?" required>
-            <input type="email" name="" placeholder="Ваша почта для ответа?" required>
+        <form class="form-feedback" action="" method="post">
+          <div class="form-feedback__contact">
+            <input class="form-field" type="text" name="" placeholder="Как вас зовут?" required>
+            <input class="form-field" type="email" name="" placeholder="Ваша почта для ответа?" required>
           </div>
-          <textarea class="form-field__message" name="" placeholder="Напишите что-нибудь..." cols="30" rows="10" required></textarea>
+          <textarea class="form-feedback__message" name="" placeholder="Напишите что-нибудь..." cols="30" rows="10" required></textarea>
           <input class="page-btn" type="submit" value="Отправить">
         </form>
       </div><!-- Форма обратной связи -->
