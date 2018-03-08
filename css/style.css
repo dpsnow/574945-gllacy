@@ -4,14 +4,15 @@
   src: url(https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic);
   font-display: optional;
 }
-  .container {
-    width: 1200px;
-    box-sizing: border-box;
-    margin: auto;
-  }
+
+.container {
+  min-width: 900px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: auto;
+}
 
 /* */
-
 .location__map {
   width: 100%;
   height: 430px;
@@ -24,6 +25,10 @@
 /* Сброс общих стилей */
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: inherit;
 }
 
 p {
@@ -48,17 +53,19 @@ button {
 }
 
 /*Глобальные стили элементы*/
-
 .link {
   text-decoration: underline;
 }
 
 .visually-hidden {
-  position: absolute;
+  border: 0;
   clip: rect(0 0 0 0);
-  width: 1px;
   height: 1px;
   margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .form-field {
@@ -76,9 +83,13 @@ button {
 }
 
 .page-btn {
-  min-height: 44px;
+  display: inline-block;
+  box-sizing: border-box;
+  min-height: 46px;
   padding: 10px 22px;
   font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -90,13 +101,11 @@ button {
 }
 
 .page-btn:hover {
-  font-weight: bold;
   background: linear-gradient(180deg, #f58669, #ec6f5e);
   box-shadow: 0px 1px 2px 0px #ac1000;
 }
 
 .page-btn:active {
-  font-weight: bold;
   color: #fceeec;
   background-image: linear-gradient(180deg, #f26843, #e74a35);
   box-shadow: inset 0px 2px 2px 0px #942718;
@@ -147,8 +156,7 @@ body {
   color: #ffffff;
 }
 
-.main-nav__link:hover,
-.main-nav__link:focus {
+.main-nav__link:hover, .main-nav__link:focus {
   color: #323232;
   background-color: #f6f4f8;
   border-radius: 32px;
@@ -220,12 +228,12 @@ body {
   left: 9px;
   right: 9px;
   height: 1px;
-  background: rgba(53, 53, 53, 0.5);
+  background: rgba(53, 53, 53, 0.2);
 }
 
-.main-nav__item_dropdown:hover>.site-nav__sub-nav,
-.main-nav__item_dropdown:focus>.site-nav__sub-nav,
-.main-nav__item_dropdown:active>.site-nav__sub-nav {
+.main-nav__item_dropdown:hover > .site-nav__sub-nav,
+.main-nav__item_dropdown:focus > .site-nav__sub-nav,
+.main-nav__item_dropdown:active > .site-nav__sub-nav {
   display: block;
 }
 
@@ -248,8 +256,7 @@ body {
   border-radius: 32px;
 }
 
-.user-nav__btn:hover,
-.user-nav__btn:focus {
+.user-nav__btn:hover, .user-nav__btn:focus {
   color: #323232;
   background-color: #f6f4f8;
 }
@@ -264,15 +271,13 @@ body {
   background-position: center center;
 }
 
-.user-nav__btn_search:hover,
-.user-nav__btn_search:focus,
-.user-nav__btn_search:active {
+.user-nav__btn_search:hover, .user-nav__btn_search:focus, .user-nav__btn_search:active {
   background-image: url("../img/loupe_dark.svg");
 }
 
-.user-nav__btn_search:hover + .popup-search,
-.user-nav__btn_search:focus + .popup-search,
-.user-nav__btn_search:active + .popup-search {
+.user-nav__btn_search:hover ~ .popup-search,
+.user-nav__btn_search:focus ~ .popup-search,
+.user-nav__btn_search:active ~ .popup-search {
   display: block;
 }
 
@@ -283,8 +288,7 @@ body {
   background-position: 17px center;
 }
 
-.user-nav__btn_auth:hover,
-.user-nav__btn_auth:focus {
+.user-nav__btn_auth:hover, .user-nav__btn_auth:focus {
   background-image: url("../img/entrance_dark.svg");
 }
 
@@ -302,8 +306,7 @@ body {
   background-position: 17px center;
 }
 
-.user-nav__btn_cart:hover,
-.user-nav__btn_cart:focus {
+.user-nav__btn_cart:hover, .user-nav__btn_cart:focus {
   background-image: url("../img/basket_dark.svg");
 }
 
@@ -385,4 +388,58 @@ body {
 .page-header__contacts_phone {
   font-size: 22px;
   white-space: nowrap;
+}
+
+.slider {
+  display: block;
+  max-height: 607px;
+  background-color: #f6b5a5;
+}
+
+.promo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 27px;
+}
+
+.promo__item {
+  position: relative;
+  width: 100%;
+  min-height: 230px;
+  box-sizing: border-box;
+  margin-right: 26px;
+  padding: 19px 30px 95px 19px;
+  color: #ffffff;
+  border-radius: 15px;
+  background-size: cover;
+}
+
+.promo__item:last-of-type {
+  margin-right: 0px;
+}
+
+.promo-item__title {
+  margin: 0 0 16px 0;
+  font-size: 35px;
+}
+
+.promo-item__text {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.promo-item__btn {
+  position: absolute;
+  bottom: 25px;
+  right: 21px;
+}
+
+.promo__item_1 {
+  background-color: #5e1926;
+  background-image: url(../img/promo-raspberry.jpg);
+}
+
+.promo__item_2 {
+  background-color: #41271b;
+  background-image: url(../img/promo-chocolate.jpg);
 }
