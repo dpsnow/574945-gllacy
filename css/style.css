@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Roboto', Arial, sans-serif;
-  src: url(https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic);
+  src: url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic");
   font-display: optional;
 }
 
@@ -10,16 +10,6 @@
   max-width: 1200px;
   box-sizing: border-box;
   margin: auto;
-}
-
-/* */
-.location__map {
-  width: 100%;
-  height: 430px;
-  margin: 0;
-  padding: 0;
-  background-image: url(../img/map.png);
-  background-position: center;
 }
 
 /* Сброс общих стилей */
@@ -436,10 +426,107 @@ body {
 
 .promo__item_1 {
   background-color: #5e1926;
-  background-image: url(../img/promo-raspberry.jpg);
+  background-image: url("/img/promo-raspberry.jpg");
 }
 
 .promo__item_2 {
   background-color: #41271b;
-  background-image: url(../img/promo-chocolate.jpg);
+  background-image: url("/img/promo-chocolate.jpg");
+}
+
+.location {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  margin: 0;
+  padding: 0;
+}
+
+.location__map {
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/map.png");
+  background-position: center;
+}
+
+.location__info {
+  position: absolute;
+  top: 0;
+  right: 27px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 302px;
+  max-width: 50%;
+  height: 305px;
+  overflow: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 31px 25px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.location__text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.location__adress,
+.location__phone {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.location__btn {
+  align-self: center;
+  min-width: 252px;
+}
+
+.modal-feedback {
+  position: relative;
+  padding: 19px 25px;
+  padding-bottom: 72px;
+  box-sizing: border-box;
+  background-color: #f8f7f4;
+  border-radius: 15px;
+  max-width: 478px;
+}
+
+.modal-feedback__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.form-feedback__contact {
+  width: 60%;
+}
+
+.form-feedback__field {
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.form-feedback__btn {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 18px;
+  height: 17px;
+  background-image: url("/img/cross-big.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }

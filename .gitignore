@@ -10,3 +10,5 @@ npm-debug.*
 Thumbs.db
 Q&A+TODO.html
 css/style.scss
+js/2-location-map.js
+css/style.css.map
