@@ -17,7 +17,12 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: inherit;
 }
 
@@ -29,6 +34,7 @@ p {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 hr {
@@ -78,7 +84,7 @@ button {
   min-height: 46px;
   padding: 10px 22px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   vertical-align: middle;
@@ -142,7 +148,7 @@ body {
 .main-nav__link {
   position: relative;
   padding: 6px 14px 7px 14px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -208,7 +214,7 @@ body {
 
 .sub-nav__item_special {
   position: relative;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .sub-nav__item_special::after {
@@ -369,7 +375,7 @@ body {
   display: block;
   margin-top: -8px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
   text-align: right;
   line-height: 24px;
@@ -392,20 +398,33 @@ body {
   padding: 0 27px;
 }
 
-.promo__item {
+.promo-item {
   position: relative;
   width: 100%;
   min-height: 230px;
   box-sizing: border-box;
-  margin-right: 26px;
   padding: 19px 30px 95px 19px;
   color: #ffffff;
   border-radius: 15px;
   background-size: cover;
 }
 
+.promo__item {
+  margin-right: 26px;
+}
+
 .promo__item:last-of-type {
   margin-right: 0px;
+}
+
+.promo-item_1 {
+  background-color: #5e1926;
+  background-image: url("/img/promo-raspberry.jpg");
+}
+
+.promo-item_2 {
+  background-color: #41271b;
+  background-image: url("/img/promo-chocolate.jpg");
 }
 
 .promo-item__title {
@@ -422,16 +441,6 @@ body {
   position: absolute;
   bottom: 25px;
   right: 21px;
-}
-
-.promo__item_1 {
-  background-color: #5e1926;
-  background-image: url("/img/promo-raspberry.jpg");
-}
-
-.promo__item_2 {
-  background-color: #41271b;
-  background-image: url("/img/promo-chocolate.jpg");
 }
 
 .location {
@@ -485,6 +494,61 @@ body {
 .location__btn {
   align-self: center;
   min-width: 252px;
+}
+
+.page-features {
+  padding: 0 27px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 29px 20px 0 20px;
+  padding-bottom: 0;
+  background-color: #ede1c5;
+  background-image: url("/img/background-waffle.jpg");
+  background-repeat: repeat;
+  border-radius: 15px;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.features__item {
+  max-width: 50%;
+  padding: 15px 0px 10px 53px;
+  box-sizing: border-box;
+  background-size: 49px 49px;
+  background-repeat: no-repeat;
+}
+
+.features__item_ice-cream {
+  background-image: url("/img/ice-cream.svg");
+}
+
+.features__item_ingredients {
+  background-image: url("/img/eco.svg");
+}
+
+.features__item_farmers {
+  background-image: url("/img/cow.svg");
+}
+
+.features__item_delivery {
+  background-image: url("/img/thermometer.svg");
 }
 
 .modal-feedback {
