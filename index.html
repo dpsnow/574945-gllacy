@@ -3,29 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес.">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-
+    
     <title>Gllacy Shop</title>
   </head>
   <body>
+    <h1 class="visually-hidden">Магазин мороженого "Глэйси"</h1>
     <!--Шапка -->
-    <header class="page-header container">
+    <header class="page-header">
       <div class="page-header__nav">
         <nav class="site-nav">
           <a class="site-nav__logo">
-            <img src="img/gllacyShop-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
+            <img src="/img/gllacyShop-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
           </a>
           <ul class="site-nav__main-nav main-nav">
             <li class="main-nav__item main-nav__item_dropdown">
-              <a class="main-nav__link " href="catalog.html">Каталог</a>
+              <a class="main-nav__link " href="/catalog.html">Каталог</a>
               <ul class="site-nav__sub-nav sub-nav">
                 <li class="sub-nav__item sub-nav__item_special">
                   <a class="sub-nav__link" href="">Новинки</a>
                 </li>
                 <li class="sub-nav__item">
-                  <a class="sub-nav__link" href="catalog.html">Сливочное</a>
+                  <a class="sub-nav__link" href="/catalog.html">Сливочное</a>
                 </li>
                 <li class="sub-nav__item">
                   <a class="sub-nav__link" href="">Щербеты</a>
@@ -67,8 +68,8 @@
                 <div class="form-auth__footer">
                   <input class="form-auth__submit-btn page-btn" type="submit" value="Войти">
                   <div class="form-auth__list-links">
-                    <a class="form-auth__link" href="#">Забыли пароль?</a>
-                    <a class="form-auth__link " href="#">Новая регистрация</a>
+                    <a class="form-auth__link link_dark" href="#">Забыли пароль?</a>
+                    <a class="form-auth__link link_dark" href="#">Новая регистрация</a>
                   </div>
                 </div>
               </form>
@@ -85,27 +86,26 @@
         <span class="page-header__contacts_phone">8 812 450-25-25</span>
       </p>
     </header>
-    <main class="container">
-      <h1 class="visually-hidden">Магазин мороженого "Глэйси"</h1>
+    <main>
     <!-- Слайдер-товара, переключатель, кнопка ? -->
       <div class="slider">
         <ul class="slides__list">
           <li class="slides__item">
               <figure class="slid">
                 <figcaption class="slid__title">Крем-брюле и пломбир с малиновым джемом</figcaption>
-                <img class="promo__img" src="img/slider-promo-.png" alt="" width="" height="">
+                <img class="promo__img" src="/img/slider-promo-.png" alt="" width="" height="">
               </figure>
           </li>
           <li class="slides__item">
               <figure class="slid">
                 <figcaption class="slid__title">Шоколадный пломбир и лимонный сорбет </figcaption>
-                <img class="slid__img" src="img/slider-promo-.png" alt="" width="" height="">
+                <img class="slid__img" src="/img/slider-promo-.png" alt="" width="" height="">
               </figure>
           </li>
           <li class="slides__item">
               <figure class="slid">
                 <figcaption class="slid__title">Пломбир с помадкой и клубничный щербет</figcaption>
-                <img class="slid__img" src="img/slider-promo-.png" alt="" width="" height="">
+                <img class="slid__img" src="/img/slider-promo-.png" alt="" width="" height="">
               </figure>
           </li>
         </ul>
@@ -142,25 +142,29 @@
       <section class="hit-products">
         <h2 class="visually-hidden">Хиты</h2>
         <ul class="hit-products__list">
-          <li class="hit-products__item">
-            <h3 class="hit-products__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            <p class="hit-products__price">310&#8381;<span>/кг</span></p>
-            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
+          <li class="hit-products__item" tabindex="0">
+            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
+            <p class="hit-products__price">310&#8381;<span  class="hit-products__price_weight">/кг</span></p>
+            <img class="hit-products__photo" src="/img/orange-jam.jpg" alt="Фоторафия мороженого">
+            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
-          <li class="hit-products__item">
-            <h3 class="hit-products__name">Сливочно-кофейное с кусочками шоколада</h3>
-            <p class="hit-products__price">380&#8381;<span>/кг</span></p>
-            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
+          <li class="hit-products__item" tabindex="0">
+            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочно-кофейное с кусочками шоколада</span></h3>
+            <p class="hit-products__price">380&#8381;<span  class="hit-products__price_weight">/кг</span></p>
+            <img class="hit-products__photo" src="/img/coffee-chocolate.jpg" alt="Фоторафия мороженого">
+            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
-          <li class="hit-products__item">
-            <h3 class="hit-products__name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-            <p class="hit-products__price">355&#8381;<span>/кг</span></p>
-            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
+          <li class="hit-products__item" tabindex="0">
+            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
+            <p class="hit-products__price">355<span class="visually-hidden">p</span><span  class="hit-products__price_weight">/кг</span></p>
+            <img class="hit-products__photo" src="/img/strawberry.jpg" alt="Фоторафия мороженого">
+            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
-          <li class="hit-products__item">
-            <h3 class="hit-products__name">Сливочное крем-брюле с карамельной подливкой</h3>
-            <p class="hit-products__price">415&#8381;<span>/кг</span></p>
-            <img class="hit-products__photo" src="img/" alt="Фоторафия мороженого" width="267" height="267">
+          <li class="hit-products__item" tabindex="0">
+            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочное крем-брюле с карамельной подливкой</span></h3>
+            <p class="hit-products__price">415&#8381;<span class="hit-products__price_weight">/кг</span></p>
+            <img class="hit-products__photo" src="/img/creme-brulee.jpg" alt="Фоторафия мороженого">
+            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
         </ul>
       </section>
@@ -195,7 +199,7 @@
       <article class="blog-post">
         <h2 class="visually-hidden">Блог</h2>
         <span class="blog-post__text">Новое в нашем блоге</span>
-        <a class="blog-post__title link" href="">
+        <a class="blog-post__title" href="">
           <h3>10 способов сервировки фруктовых щербетов к столу</h3>
         </a>
       </article>
@@ -206,7 +210,7 @@
         <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
           <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
-          <input class="form-field" id="subscribe-email" type="email" name="" placeholder="Электронная почта">
+          <input class="form-field" id="subscribe-email" type="email" name="" placeholder="Электронная почта" required>
           <input class="page-btn" type="submit" value="Отправить">
         </form>
       </section>
