@@ -77,7 +77,7 @@
           <!-- Форма авторизации -->
           </li>
           <li class="user-nav__item">
-              <a class="user-nav__btn user-nav__btn_cart" href="#">Пусто</a>
+              <a class="user-nav__btn user-nav__btn_cart-empty" href="#">Пусто</a>
           </li>
         </ul>
       </div>
@@ -86,7 +86,6 @@
         <span class="page-header__contacts_phone">8 812 450-25-25</span>
       </p>
     </header>
-  <!-- Основное -->
     <main>
     <!-- Слайдер-товара, переключатель, кнопка ? -->
       <div class="slider">
@@ -143,29 +142,29 @@
       <section class="hit-products">
         <h2 class="visually-hidden">Хиты</h2>
         <ul class="hit-products__list">
-          <li class="hit-products__item" tabindex="0">
-            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
-            <p class="hit-products__price">310&#8381;<span  class="hit-products__price_weight">/кг</span></p>
-            <img class="hit-products__photo" src="img/orange-jam.jpg" alt="Фоторафия мороженого">
-            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
+          <li class="products products__item_hit" tabindex="0">
+            <h3 class="products__name"><span class="products__name_underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
+            <p class="products__price">310&#8381;<span  class="products__price_weight">/кг</span></p>
+            <img class="products__photo" src="img/orange-jam.jpg" alt="Фоторафия мороженого">
+            <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
-          <li class="hit-products__item" tabindex="0">
-            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочно-кофейное с кусочками шоколада</span></h3>
-            <p class="hit-products__price">380&#8381;<span  class="hit-products__price_weight">/кг</span></p>
-            <img class="hit-products__photo" src="img/coffee-chocolate.jpg" alt="Фоторафия мороженого">
-            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
+          <li class="products products__item_hit" tabindex="0">
+            <h3 class="products__name"><span class="products__name_underline">Сливочно-кофейное с кусочками шоколада</span></h3>
+            <p class="products__price">380&#8381;<span  class="products__price_weight">/кг</span></p>
+            <img class="products__photo" src="img/coffee-chocolate.jpg" alt="Фоторафия мороженого">
+            <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
-          <li class="hit-products__item" tabindex="0">
-            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
-            <p class="hit-products__price">355<span class="visually-hidden">p</span><span  class="hit-products__price_weight">/кг</span></p>
-            <img class="hit-products__photo" src="img/strawberry.jpg" alt="Фоторафия мороженого">
-            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
+          <li class="products products__item_hit" tabindex="0">
+            <h3 class="products__name"><span class="products__name_underline">Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
+            <p class="products__price">355<span class="visually-hidden">p</span><span  class="products__price_weight">/кг</span></p>
+            <img class="products__photo" src="img/strawberry.jpg" alt="Фоторафия мороженого">
+            <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
-          <li class="hit-products__item" tabindex="0">
-            <h3 class="hit-products__name"><span class="hit-products__name_underline">Сливочное крем-брюле с карамельной подливкой</span></h3>
-            <p class="hit-products__price">415&#8381;<span class="hit-products__price_weight">/кг</span></p>
-            <img class="hit-products__photo" src="img/creme-brulee.jpg" alt="Фоторафия мороженого">
-            <button class="hit__btn page-btn" type="button">Быстрый просмотр</button>
+          <li class="products products__item_hit" tabindex="0">
+            <h3 class="products__name"><span class="products__name_underline">Сливочное крем-брюле с карамельной подливкой</span></h3>
+            <p class="products__price">415&#8381;<span class="products__price_weight">/кг</span></p>
+            <img class="products__photo" src="img/creme-brulee.jpg" alt="Фоторафия мороженого">
+            <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
           </li>
         </ul>
       </section>
@@ -200,8 +199,8 @@
       <article class="blog-post">
         <h2 class="visually-hidden">Блог</h2>
         <span class="blog-post__text">Новое в нашем блоге</span>
-        <h3>
-          <a class="blog-post__title" href="">
+        <h3 class="">
+          <a class="blog-post__title link link_dark" href="">
             10 способов сервировки фруктовых щербетов к столу
           </a>
         </h3>
@@ -211,12 +210,14 @@
       <!-- Форма для подписки -->
       <section class="subscribe">
         <h2 class="visually-hidden">Подписаться</h2>
-        <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-          <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
-          <input class="form-field" id="subscribe-email" type="email" name="" placeholder="Электронная почта" required>
-          <input class="page-btn" type="submit" value="Отправить">
-        </form>
+        <div class="subscribe__content">
+          <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
+            <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
+            <input class="subscribe_field form-field" id="subscribe-email" type="email" name="subscribe-email" placeholder="Электронная почта" required>
+            <input class="subscribe__btn page-btn" type="submit" value="Отправить">
+          </form>
+        </div>
       </section>
     
       <!-- Карта -->
@@ -243,19 +244,17 @@
         <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-feedback__contact">
             <label class="visually-hidden" for="feedback-name">Имя</label>
-            <input class="form-feedback__field form-field" type="text" name="" placeholder="Как вас зовут?" required>
+            <input class="form-feedback__field form-field" type="text" name="feedback-name" placeholder="Как вас зовут?" required>
             <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-            <input class="form-feedback__field form-field" type="email" name="" placeholder="Ваша почта для ответа?" required>
+            <input class="form-feedback__field form-field" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required>
           </div>
           <label class="visually-hidden" for="feedback-message">Ваше сообщение</label>
-          <textarea class="form-feedback__field form-field" id="feedback-message"" form-feedback__message" name="" placeholder="Напишите что-нибудь..." cols="7" rows="7" required></textarea>
+          <textarea class="form-feedback__field form-field" id="feedback-message"" form-feedback__message" name="feedback-message" placeholder="Напишите что-нибудь..." cols="7" rows="7" required></textarea>
           <input class="form-feedback__btn page-btn" type="submit" value="Отправить">
         </form>
         <button class="modal-close" type="button" aria-label="Закрыть"><span class="visually-hidden">Закрыть</span></button>
       </div><!-- Форма обратной связи -->
-
     </main>
-  <!-- Основное -->
     <!-- Футер -->
     <footer class="footer">
         <ul class="footer__social social">
