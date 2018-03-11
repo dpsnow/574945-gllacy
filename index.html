@@ -68,8 +68,8 @@
                 <div class="form-auth__footer">
                   <input class="form-auth__submit-btn page-btn" type="submit" value="Войти">
                   <div class="form-auth__list-links">
-                    <a class="form-auth__link link_dark" href="#">Забыли пароль?</a>
-                    <a class="form-auth__link link_dark" href="#">Новая регистрация</a>
+                    <a class="form-auth__link link link_dark" href="#">Забыли пароль?</a>
+                    <a class="form-auth__link link link_dark" href="#">Новая регистрация</a>
                   </div>
                 </div>
               </form>
@@ -86,6 +86,7 @@
         <span class="page-header__contacts_phone">8 812 450-25-25</span>
       </p>
     </header>
+  <!-- Основное -->
     <main>
     <!-- Слайдер-товара, переключатель, кнопка ? -->
       <div class="slider">
@@ -199,10 +200,13 @@
       <article class="blog-post">
         <h2 class="visually-hidden">Блог</h2>
         <span class="blog-post__text">Новое в нашем блоге</span>
-        <a class="blog-post__title" href="">
-          <h3>10 способов сервировки фруктовых щербетов к столу</h3>
-        </a>
+        <h3>
+          <a class="blog-post__title" href="">
+            10 способов сервировки фруктовых щербетов к столу
+          </a>
+        </h3>
       </article>
+
     
       <!-- Форма для подписки -->
       <section class="subscribe">
@@ -251,32 +255,45 @@
       </div><!-- Форма обратной связи -->
 
     </main>
+  <!-- Основное -->
     <!-- Футер -->
-    <footer class="page-footer">
-        <ul class="footer-social">
-          <li class="social-btn social-btn_tw">
-            <a href="">Twitter</a>
+    <footer class="footer">
+        <ul class="footer__social social">
+          <li class="">
+            <a class="social__btn social__btn_tw" href=""><span class="visually-hidden">Twitter</span></a>
           </li>
-          <li class="social-btn social-btn_int">
-            <a href="">Instagram</a>
+          <li class="">
+            <a class="social__btn social__btn_int" href=""><span class="visually-hidden">Instagram</span></a>
           </li>
-          <li class="social-btn social-btn_fb">
-            <a href="">Facebook</a>
+          <li class="">
+            <a class="social__btn social__btn_fb" href=""><span class="visually-hidden">Facebook</span></a>
           </li>
-          <li class="social-btn social-btn_vk">
-            <a href="">Вконтакте</a>
+          <li class="">
+            <a class="social__btn social__btn_vk" href=""><span class="visually-hidden">Вконтакте</span></a>
           </li>
         </ul>
-        <ul class="footer-info">
-            <li class="footer-info__item"><a href=""><b>Для поставщиков</b></a></li>
-            <li class="footer-info__item"><a href="">О производстве</a></li>
-            <li class="footer-info__item"><a href="">Наши документы</a></li>
-            <li class="footer-info__item"><a href="">Экологические стандарты</a></li>
+
+        <ul class="footer__info info-links">
+          <li class="info-links__item">
+            <a class="link link_light" href="">
+              <b class="info-links__item_special">Для поставщиков</b>
+            </a>
+          </li>
+          <li class="info-links__item">
+            <a class="link link_light" href="">О производстве</a>
+          </li>
+          <li class="info-links__item">
+            <a class="link link_light" href="">Наши документы</a>
+          </li>
+          <li class="info-links__item">
+            <a class="link link_light" href="">Экологические стандарты</a>
+          </li>
         </ul>
-        <div class="footer-copyright">
-          <img class="footer-copyright__logo" src="" width="108" height="39" alt="Логотип HTML Academy">
+
+        <div class="footer__copyright copyright">
+          <img class="copyright__logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
           <p>Сделано в
-            <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            <a class="copyright__link link link_light" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
            © 2017</p>
         </div>
     </footer>
