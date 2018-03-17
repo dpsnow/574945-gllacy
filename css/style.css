@@ -1267,3 +1267,15 @@ input[type="checkbox"]:checked + .filters__checkbox::before {
   width: 24px; /* число случайное, но совпадаеn c line-height блока button */
   height: 24px; /* число случайное, но совпадаеn c line-height блока button */
 }
+
+.page-header__action {
+  display: flex;
+}
+
+.page-header__address {
+  margin-left: auto;
+}
+
+.address {
+  display: inline-block;
+}
