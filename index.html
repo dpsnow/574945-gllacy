@@ -21,11 +21,11 @@
         </a>
       </div>
       <div class="page-header__nav">
-        <nav class="site-nav">
-          <ul class="site-nav__main-nav main-nav">
-            <li class="main-nav__item main-nav__item_dropdown">
-              <a class="main-nav__link" href="catalog.html">Каталог</a>
-              <ul class="site-nav__sub-nav sub-nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item nav__item_dropdown">
+              <a class="nav__link" href="catalog.html">Каталог</a>
+              <ul class="nav__sub-nav sub-nav">
                 <li class="sub-nav__item sub-nav__item_special">
                   <a class="sub-nav__link" href="">Новинки</a>
                 </li>
@@ -43,53 +43,34 @@
                 </li>
               </ul>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Доставка и оплата</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Доставка и оплата</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">О Компании</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">О Компании</a>
+            </li>
+          </ul>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <button class="nav__link">
+                <span class="icon icon_symbol_search"></span>
+                <span class="visually-hidden">Поиск</span>
+              </button>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Вход</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Пусто</a>
             </li>
           </ul>
         </nav>
-        <ul class="user-nav">
-          <li class="user-nav__item">
-            <a class="user-nav__btn user-nav__btn_search" href="#"><span class="visually-hidden">Поиск</span> </a>
-          <!-- Форма поиска -->
-            <div class="user-nav__popup popup-search popup popup-hidden">
-              <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
-                <input class="form-field" type="search" name="search" placeholder="Что ищем?">
-              </form>
-            </div>
-          <!-- Форма поиска -->
-          </li>
-          <li class="user-nav__item">
-            <a class="user-nav__btn user-nav__btn_auth" role="button" href="#" >Вход</a>
-          <!-- Форма авторизации -->
-            <div class="user-nav__popup popup-auth popup-hidden popup ">
-              <form class="form-auth" action="https://echo.htmlacademy.ru" method="post">
-                <input class="form-auth__field form-field" type="text" name="auth" placeholder="Электронная почта" required>
-                <input class="form-auth__field form-field" type="password" name="password" placeholder="Пароль" required>
-                <div class="form-auth__footer">
-                  <input class="form-auth__submit-btn page-btn" type="submit" value="Войти">
-                  <div class="form-auth__list-links">
-                    <a class="form-auth__link link link_dark" href="#">Забыли пароль?</a>
-                    <a class="form-auth__link link link_dark" href="#">Новая регистрация</a>
-                  </div>
-                </div>
-              </form>
-            </div>
-          <!-- Форма авторизации -->
-          </li>
-          <li class="user-nav__item">
-              <a class="user-nav__btn user-nav__btn_cart-empty" href="#">Пусто</a>
-          </li>
-        </ul>
       </div>
-      <p class="page-header__contacts">
-        С 10 до 20, ежедневно<br>
-        <span class="page-header__contacts_phone">8 812 450-25-25</span>
-      </p>
     </header>
+    <address class="address">
+      С 10 до 20, ежедневно<br>
+      <span class="text text_bold text_size_l">8 812 450-25-25</span>
+    </address>
     <main>
     <!-- Слайдер-товара, переключатель, кнопка ? -->
       <div class="slider">
