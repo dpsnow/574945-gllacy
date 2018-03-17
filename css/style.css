@@ -1194,9 +1194,15 @@ input[type="checkbox"]:checked + .filters__checkbox::before {
   display: flex;
 }
 
+.nav__logo + .nav__list {
+  margin-left: 40px; /* число случайное, с макетом не сверялся */
+}
+
 .nav__list {
   list-style: none;
   display: flex;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .nav__item {
