@@ -1268,8 +1268,16 @@ input[type="checkbox"]:checked + .filters__checkbox::before {
   height: 24px; /* число случайное, но совпадаеn c line-height блока button */
 }
 
+.page-header {
+  position: relative;
+}
+
 .page-header__action {
   display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
 }
 
 .page-header__address {
@@ -1278,4 +1286,5 @@ input[type="checkbox"]:checked + .filters__checkbox::before {
 
 .address {
   display: inline-block;
+  text-align: right;
 }
