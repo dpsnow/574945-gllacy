@@ -13,12 +13,12 @@
   </head>
   <body>
     <h1 class="visually-hidden">Магазин мороженого "Глэйси"</h1>
-    <!--Шапка -->
-    <header class="page-header container">
-      <div class="page-header__nav">
+  <!--Шапка -->
+    <header class="page-header header">
+      <div class="header__nav">
         <nav class="site-nav">
-          <a class="site-nav__logo">
-            <img src="img/gllacyShop-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
+          <a class="site-nav__logo logo">
+            <img class="logo_img" src="img/gllacyShop-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
           </a>
           <ul class="site-nav__main-nav main-nav">
             <li class="main-nav__item main-nav__item_dropdown">
@@ -53,7 +53,7 @@
           <li class="user-nav__item">
             <a class="user-nav__btn user-nav__btn_search" href="#"><span class="visually-hidden">Поиск</span> </a>
           <!-- Форма поиска -->
-            <div class="user-nav__popup popup-search popup popup-hidden">
+            <div class="user-nav__popup popup-search popup-hidden">
               <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
                 <input class="form-field" type="search" name="search" placeholder="Что ищем?">
               </form>
@@ -63,7 +63,7 @@
           <li class="user-nav__item">
             <a class="user-nav__btn user-nav__btn_auth" role="button" href="#" >Вход</a>
           <!-- Форма авторизации -->
-            <div class="user-nav__popup popup-auth popup-hidden popup ">
+            <div class="user-nav__popup popup-auth popup-hidden">
               <form class="form-auth" action="https://echo.htmlacademy.ru" method="post">
                 <input class="form-auth__field form-field" type="text" name="auth" placeholder="Электронная почта" required>
                 <input class="form-auth__field form-field" type="password" name="password" placeholder="Пароль" required>
@@ -83,67 +83,70 @@
           </li>
         </ul>
       </div>
-      <p class="page-header__contacts">
+      <p class="header__contacts">
         С 10 до 20, ежедневно<br>
-        <span class="page-header__contacts_phone">8 812 450-25-25</span>
+        <span class="header__contacts_phone">8 812 450-25-25</span>
       </p>
     </header>
-    <main>
+    <main class="page-main">
     <!-- Слайдер-товара, переключатель, кнопка ? -->
-      <div class="slider">
-        <ul class="slides__list">
-          <li class="slides__item">
-              <figure class="slid">
-                <figcaption class="slid__title">Крем-брюле и пломбир с малиновым джемом</figcaption>
-                <img class="promo__img" src="img/slider-promo-.png" alt="" width="" height="">
-              </figure>
+      <div class="slider layout">
+        <h2 class="visually-hidden">Новинки</h2>
+        <ul class="slider__list">
+          <li class="slider__item">
+            <figure class="promo-slid">
+              <figcaption class="promo-slid__title">Крем-брюле и пломбир с малиновым джемом</figcaption>
+              <img class="promo-slid__img" src="img/slider-promo-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="" height="">
+              <a class="slider__btn page-btn page-btn_size-l" href="catalog.html">Давайте оба!</a>
+            </figure>
           </li>
-          <li class="slides__item">
-              <figure class="slid">
-                <figcaption class="slid__title">Шоколадный пломбир и лимонный сорбет </figcaption>
-                <img class="slid__img" src="img/slider-promo-.png" alt="" width="" height="">
-              </figure>
+          <li class="slider__item">
+            <figure class="promo-slid">
+              <figcaption class="promo-slid__title">Шоколадный пломбир и лимонный сорбет</figcaption>
+              <img class="promo-slid__img" src="img/slider-promo-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="" height="">
+            </figure>
+            <a class="slider__btn page-btn page-btn_size-l" href="catalog.html">Давайте оба!</a>
           </li>
-          <li class="slides__item">
-              <figure class="slid">
-                <figcaption class="slid__title">Пломбир с помадкой и клубничный щербет</figcaption>
-                <img class="slid__img" src="img/slider-promo-.png" alt="" width="" height="">
-              </figure>
+          <li class="slider__item">
+            <figure class="promo-slid">
+              <figcaption class="promo-slid__title">Пломбир с помадкой и клубничный щербет</figcaption>
+              <img class="promo-slid__img" src="img/slider-promo-3.png" alt="Пломбир с помадкой и клубничный щербет" width="" height="">
+            </figure>
+            <a class="slider__btn page-btn page-btn_size-l" href="catalog.html">Давайте оба!</a>
           </li>
         </ul>
-        <div class="slider__navigation">
-            <input type="radio" id="btn-1" name="toggle" checked>
-            <input type="radio" id="btn-2" name="toggle">
-            <input type="radio" id="btn-3" name="toggle">
-          <div class="slider__navigation">
-              <label for="btn-1"></label>
-              <label for="btn-2"></label>
-              <label for="btn-3"></label>
+        <div class="slider__indicators-list">
+          <div class="slider__indicators-item" for="btn-1">
+            <button class="visually-hidden">Переключить на 1 слайд</button>
           </div>
-          <a class="page-btn page-btn_size-l" href="" >Давайте оба!</a>
+          <div class="slider__indicators-item" for="btn-2">
+            <button class="visually-hidden">Переключить на 2 слайд</button>
+          </div>
+          <div class="slider__indicators-item" for="btn-3">
+            <button class="visually-hidden">Переключить на 3 слайд</button>
+          </div>
         </div>
       </div>
-    <!-- Слайдер-товара, переключатель, кнопка ? -->
       
     <!--Баннеры -->
-      <section class="container container_flex">
+      <section class="promo layout">
         <h2 class="visually-hidden">Акции</h2>
-        <article class="promo card promo__item_1">
+        <article class="promo__item promo__item_1 card">
           <h3 class="promo__title">Малинка даром!</h3>
           <p class="promo__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a href="#" class="page-btn promo__btn">Хочу варенье!</a>
         </article>
-        <article class="promo card promo__item_2">
+        <article class="promo__item promo__item_2 card">
           <h3 class="promo__title">Шоколадки даром!</h3>
           <p class="promo__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a href="#" class="page-btn promo__btn">Хочу шоколадки!</a>
         </article>
       </section>
     
-      <!--Хиты -->
-      <section class="">
+    <!--Хиты -->
+      <section class="hit-products layout">
         <h2 class="visually-hidden">Хиты</h2>
-        <ul class="hit-products">
+        <ul class="hit-products__list">
           <li class="products products_hit" tabindex="0">
             <h3 class="products__name">
               <span class="products__name_underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
@@ -191,10 +194,10 @@
         </ul>
       </section>
     
-      <!--Описание и преимущества -->
-      <section class="container">
+    <!--Описание и преимущества -->
+      <section class="features layout">
         <h2 class="visually-hidden">О нас</h2>
-        <div class="features">
+        <div class="features__content">
           <p class="features__title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
           <ul class="features__list">
             <li class="features__item features__item_ice-cream">
@@ -217,20 +220,17 @@
         </div>
       </section>
     
-      <!--Статья -->
-      <section class="container container_flex">
+    <!--Статья -->
+      <section class="social-media layout">
+        <h2 class="visually-hidden">Блог</h2>
         <article class="blog-post card">
-          <h2 class="visually-hidden">Блог</h2>
           <span class="blog-post__text">Новое в нашем блоге</span>
-          <h3 class="blog-post__title">
-            <a class="link link_dark" href="">
-              10 способов сервировки фруктовых щербетов к столу
-            </a>
-          </h3>
+          <h3 class="blog-post__title"><a class="blog-post__link" href="">10 способов сервировки фруктовых щербетов к столу</a>
+            </h3>
         </article>
         <!-- Форма для подписки -->
         <div class="subscribe card">
-          <h2 class="visually-hidden">Подписаться</h2>
+          <h3 class="visually-hidden">Подписаться</h3>
           <div class="subscribe__content">
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
@@ -242,8 +242,8 @@
         </div>
       </section>
     
-      <!-- Карта -->
-      <section class="location" tabindex="0">
+    <!-- Карта -->
+      <section class="location layout" tabindex="0">
         <h2 class="visually-hidden">Адрес</h2>
         <div class="location__map" id="map">
           <!-- Карта -->
@@ -260,7 +260,7 @@
         </div>
       </section>
     
-      <!-- Форма обратной связи -->
+    <!-- Форма обратной связи -->
       <div class="modal-feedback">
         <p class="modal-feedback__title">Мы обязательно вам ответим!</p>
         <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
@@ -277,20 +277,20 @@
         <button class="modal-close" type="button" aria-label="Закрыть"><span class="visually-hidden">Закрыть</span></button>
       </div><!-- Форма обратной связи -->
     </main>
-    <!-- Футер -->
-    <footer class="footer">
-        <ul class="footer__social social">
+  <!-- Футер -->
+    <footer class="page-footer footer">
+        <ul class="footer__social social-btn">
           <li class="">
-            <a class="social__btn social__btn_tw" href=""><span class="visually-hidden">Twitter</span></a>
+            <a class="social-btn__item social-btn__item_tw" href=""><span class="visually-hidden">Twitter</span></a>
           </li>
           <li class="">
-            <a class="social__btn social__btn_int" href=""><span class="visually-hidden">Instagram</span></a>
+            <a class="social-btn__item social-btn__item_int" href=""><span class="visually-hidden">Instagram</span></a>
           </li>
           <li class="">
-            <a class="social__btn social__btn_fb" href=""><span class="visually-hidden">Facebook</span></a>
+            <a class="social-btn__item social-btn__item_fb" href=""><span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="">
-            <a class="social__btn social__btn_vk" href=""><span class="visually-hidden">Вконтакте</span></a>
+            <a class="social-btn__item social-btn__item_vk" href=""><span class="visually-hidden">Вконтакте</span></a>
           </li>
         </ul>
 
@@ -319,7 +319,7 @@
         </div>
     </footer>
     <script src="https://api-maps.yandex.ru/2.1-dev/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/2-location-map.js" type="text/javascript"></script>
+    <script src="js/location-map.js" type="text/javascript"></script>
     <!-- <script src="js/scripts.js" type="text/javascript"></script> -->
   </body>
 </html>
