@@ -20,7 +20,7 @@
           </a>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="button button_view_link button_view_link_current nav__link nav__link" tabindex="0">Каталог</a>
+              <a class="button button_view_link button_view_link_current nav__link" tabindex="0">Каталог</a>
               <ul class="nav__sub-nav sub-nav">
                 <li class="sub-nav__item sub-nav__item_special">
                   <a class="sub-nav__link" href="">Новинки</a>
@@ -148,221 +148,227 @@
       
     </header>
 
-    <main class="layout">
+    <main class="">
       
-      <section class="catalog-products">
-        <h1 class="catalog-products__title">Сливочное мороженое</h1>
-        <div class="catalog-products__filters">
-          <!-- Форма для сортировки -->
-          <form class="filters" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="filters__group">
-              <legend class="filters__legend">Сортировка:</legend>
-              <select class="" name="sort">
-                <option value="popularity">по популярности</option>
-                <option value="cheap">сначала недорогие</option>
-                <option value="expensive">сначала дорогие</option>
-                <option value="fat">по жирности</option>
-              </select>
+      <section class="catalog">
+        <h1 class="catalog__title layout">Сливочное мороженое</h1>
+        <div class="catalog__filters layout">
+        <!-- Форма для сортировки -->
+          <form class="form-filters" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="form-filters__item filter">
+              <legend class="form-filters__legend">Сортировка:</legend>
+                <select class="filter__list filter__list_dropdown" name="sort">
+                  <option value="popularity">по популярности</option>
+                  <option value="cheap">сначала недорогие</option>
+                  <option value="expensive">сначала дорогие</option>
+                  <option value="fat">по жирности</option>
+                </select>
             </fieldset>
-            <fieldset class="filters__group">
-              <legend class="filters__legend">Цена: 100 руб. – 500 руб.</legend>
-              <input type="range" min="1" max="10">
-              <input type="range" min="1" max="10">
+            <fieldset class="form-filters__item filter">
+              <legend class="form-filters__legend">Цена: 100 руб. – 500 руб.</legend>
+              <div class="filter__list">
+                <input class="filter__item" type="range" min="1" max="10">
+                <!-- <input class="filter__item" type="range" min="1" max="10"> -->
+              </div>
             </fieldset>
-            <fieldset class="filters__group">
-              <legend class="filters__legend">Жирность:</legend>
-
-        <input class="visually-hidden" id="fat-0" type="radio" name="fat" value="0%">
-              <label class="filters__radio" for="fat-0">0%</label>
-
-        <input class="visually-hidden" id="fat-10%" type="radio" name="fat" value="up to 10%" checked>
-              <label class="filters__radio" for="fat-10%">до 10%</label>
-
-        <input class="visually-hidden" id="fat-30%" type="radio" name="fat" value="up to 30%">
-              <label class="filters__radio" for="fat-30%">до 30%</label>
-
-        <input class="visually-hidden" id="fat-from-30%" type="radio" name="fat" value="from 30%">
-              <label class="filters__radio" for="fat-from-30%">выше 30%</label>
-
+            <fieldset class="form-filters__item filter">
+              <legend class="form-filters__legend">Жирность:</legend>
+          
+              <div class="filter__list">
+                <input class="visually-hidden" id="fat-0" type="radio" name="fat" value="0%">
+                <label class="filter__item filter__item_radio" for="fat-0">0%</label>
+            
+                <input class="visually-hidden" id="fat-10%" type="radio" name="fat" value="up to 10%" checked>
+                <label class="filter__item filter__item_radio" for="fat-10%">до 10%</label>
+            
+                <input class="visually-hidden" id="fat-30%" type="radio" name="fat" value="up to 30%">
+                <label class="filter__item filter__item_radio" for="fat-30%">до 30%</label>
+            
+                <input class="visually-hidden" id="fat-from-30%" type="radio" name="fat" value="from 30%" disabled>
+                <label class="filter__item filter__item_radio" for="fat-from-30%">выше 30%</label>
+              </div>
+          
             </fieldset>
-            <fieldset class="filters__group">
-              <legend class="filters__legend">Наполнители:</legend>
-              <input class="visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
-              <label class="filters__checkbox" for="filler-chocolate">шоколадные</label>
-              <input class="visually-hidden" type="checkbox" name="filler-sugar" id="filler-sugar" checked>
-              <label class="filters__checkbox" for="filler-sugar">сахарные присыпки</label>
-              <input class="visually-hidden" type="checkbox" name="filler-fruits" id="filler-fruits">
-              <label class="filters__checkbox" for="filler-fruits">фрукты</label>
-              <input class="visually-hidden" type="checkbox" name="filler-syrop" id="filler-syrop">
-              <label class="filters__checkbox" for="filler-syrop">сиропы</label>
-              <input class="visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
-              <label class="filters__checkbox" for="filler-jam">джемы</label>
+            <fieldset class="form-filters__item filter">
+              <legend class="form-filters__legend">Наполнители:</legend>
+              <div class="filter__list">
+                <input class="visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
+                <label class="filter__item filter__item_checkbox filters__item_disable" for="filler-chocolate">шоколадные</label>
+                <input class="visually-hidden" type="checkbox" name="filler-sugar" id="filler-sugar" checked>
+                <label class="filter__item filter__item_checkbox" for="filler-sugar">сахарные присыпки</label>
+                <input class="visually-hidden" type="checkbox" name="filler-fruits" id="filler-fruits">
+                <label class="filter__item filter__item_checkbox" for="filler-fruits">фрукты</label>
+                <input class="visually-hidden" type="checkbox" name="filler-syrop" id="filler-syrop">
+                <label class="filter__item filter__item_checkbox" for="filler-syrop">сиропы</label>
+                <input class="visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
+                <label class="filter__item filter__item_checkbox" for="filler-jam">джемы</label>
+              </div>
             </fieldset>
-            <input class="filters__btn" type="submit" value="Применить">
+            <input class="form-filters__item form-filters__btn" type="submit" value="Применить">
           </form>
           <!-- Форма для сортировки -->
         </div>
 
-        <div class="catalog-products__result">
+        <div class="catalog__result layout">
           <h2 class="visually-hidden">Ассортимент</h2>
           <!-- Товары -->
-          <ol class="catalog-products__list">
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+          <ol class="catalog__list">
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">310<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">310<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/orange-jam.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/orange-jam.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочно-кофейное с кусочками шоколада</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочно-кофейное с кусочками шоколада</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">380<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">380<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/coffee-chocolate.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/coffee-chocolate.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочно-клубничное с присыпкой из белого шоколада</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочно-клубничное с присыпкой из белого шоколада</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">355<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">355<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/strawberry.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/strawberry.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочное крем-брюле с карамельной подливкой</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочное крем-брюле с карамельной подливкой</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">415<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">415<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/creme-brulee.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/creme-brulee.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочное с брусничным джемом</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочное с брусничным джемом</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">325<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">325<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/cowberry-jam.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/cowberry-jam.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочно-черничное с цельными ягодами черники</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочно-черничное с цельными ягодами черники</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">410<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">410<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/blueberry.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/blueberry.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочно-лимонное с карамельной присыпкой</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочно-лимонное с карамельной присыпкой</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">375<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">375<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/lemon.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/lemon.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочное с шоколадной стружкой</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочное с шоколадной стружкой</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">320<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">320<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/chocolate-chip.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/chocolate-chip.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочно-ванильное с кусочками шоколада</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочно-ванильное с кусочками шоколада</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">440<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">440<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/vanilla-chocolate.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/vanilla-chocolate.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочноe с ментоловым сиропом</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочноe с ментоловым сиропом</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">435<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">435<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/menthol.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/menthol.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочное с кусочками черного шоколада</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочное с кусочками черного шоколада</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">355<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">355<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/chocolate_pieces.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/chocolate_pieces.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
-            <li class="products">
-              <h3 class="products__name">
-                <span class="products__name_underline">Сливочное с мятным сиропом</span>
+            <li class="product catalog__item" tabindex="0">
+              <h3 class="product__name">
+                <span class="product__name_underline">Сливочное с мятным сиропом</span>
               </h3>
-              <div class="products__cover">
-                <p class="products__price">420<span class="visually-hidden">p</span><span class="products__price_weight">/кг</span>
+              <div class="product__cover">
+                <p class="product__price">420<span class="visually-hidden">p</span><span class="product__price_weight">/кг</span>
                 </p>
-                <img class="products__photo" src="img/minty.jpg" alt="Фотография мороженого" width="267" height="267">
+                <img class="product__photo" src="img/minty.jpg" alt="Фотография мороженого" width="267" height="267">
               </div>
-              <button class="products__btn page-btn" type="button">Быстрый просмотр</button>
+              <button class="product__btn page-btn" type="button">Быстрый просмотр</button>
             </li>
           </ol>
           <!-- Пагинатор -->
-          <div class="pagination">
-            <a class="pagination__page pagination__page_prev pagination__page_disable">
+          <div class="pagination catalog__pagination ">
+            <a class="pagination__item pagination__item_disable pagination__nav pagination__nav_prev ">
               <span class="visually-hidden">Предыдущая страница</span>
             </a>
-            <ul class="pagination__item list-page">
-              <li class="list-page__item">
+            <ul class="pagination__item page-list">
+              <li class="page-list__item">
                 <a class="pagination__page pagination__page_current">1</a>
               </li>
-              <li class="list-page__item">
+              <li class="page-list__item">
                 <a class="pagination__page" href="#">2</a>
               </li>
-              <li class="list-page__item">
+              <li class="page-list__item">
                 <a class="pagination__page" href="#">3</a>
               </li>
-              <li class="list-page__item">
+              <li class="page-list__item">
                 <a class="pagination__page" href="#">4</a>
               </li>
-              <li class="list-page__item">
+              <li class="page-list__item">
                 <a class="pagination__page" href="#">5</a>
               </li>
             </ul>
-            <a class="pagination__page pagination__page_next" href="#">
+            <a class="pagination__item pagination__nav pagination__nav_next" href="#">
               <span class="visually-hidden">Следующая страница</span>
             </a>
           </div>
