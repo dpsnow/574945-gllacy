@@ -250,7 +250,7 @@ body {
   height: 1px;
   background: rgba(255, 255, 255, 0.3);
 }
-/* Как по другому можно задать несколько модификаторов? */
+
 .button_view_link_current {
   background-color: #cf6f57;
 }
@@ -738,7 +738,7 @@ body {
     }
   }
 }
-*/
+Старые стили для header */
 .popup {
   position: absolute;
   z-index: 10;
@@ -1458,18 +1458,21 @@ input[type="checkbox"]:checked + .filters__checkbox::before {
   align-items: flex-end;
 }
 
-.social-btn {
+.social {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.social-btn__item {
+.social__item + .social__item {
+  margin-left: 11px;
+}
+
+.social__btn {
   display: block;
   width: 38px;
   height: 38px;
-  margin-right: 11px;
   border-radius: 20px;
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.5);
   background-repeat: no-repeat;
@@ -1477,28 +1480,28 @@ input[type="checkbox"]:checked + .filters__checkbox::before {
   opacity: 0.8;
 }
 
-.social-btn__item_tw {
+.social__btn_tw {
   background-image: url("../img/twitter.svg");
 }
 
-.social-btn__item_int {
+.social__btn_int {
   background-image: url("../img/instagram.svg");
 }
 
-.social-btn__item_fb {
+.social__btn_fb {
   background-image: url("../img/fb.svg");
 }
 
-.social-btn__item_vk {
+.social__btn_vk {
   background-image: url("../img/vk.svg");
 }
 
-.social-btn__item:hover, .social-btn__item:focus {
+.social__btn:hover, .social__btn:focus {
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
 
-.social-btn__item:active {
+.social__btn:active {
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.7);
 }
 
