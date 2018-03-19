@@ -16,11 +16,11 @@
       <div class="header__nav">
         <nav class="nav">
           <a class="nav__logo logo" href="index.html">
-            <img class="logo_img" src="img/gllacyShop-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
+            <img class="logo__img" src="img/gllacyShop-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
           </a>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="button button_view_link button_view_link_current nav__link" tabindex="0">Каталог</a>
+              <a class="button button_view_link button_view_link nav__link nav__link_current" tabindex="0">Каталог</a>
               <ul class="nav__sub-nav sub-nav">
                 <li class="sub-nav__item sub-nav__item_special">
                   <a class="sub-nav__link" href="">Новинки</a>
@@ -46,87 +46,87 @@
               <a class="button button_view_link nav__link" href="#">О Компании</a>
             </li>
           </ul>
-        </nav>
-        <ul class="user-nav nav__list">
-          <li class="nav__item">
-            <button class="button button_view_glass nav__link nav__link_search" href="#">
-              <span class="visually-hidden">Поиск</span>
-            </button>
-          <!-- Форма поиска -->
-            <div class="popup popup-search popup-hidden">
-              <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
-                <input class="form-field" type="search" name="search" placeholder="Что ищем?">
-              </form>
-            </div>
-          <!-- Форма поиска -->
-          </li>
-          <li class="nav__item">
-            <a class="button button_view_glass nav__link nav__link_auth" href="#">Вход</a>
-          <!-- Форма авторизации -->
-            <div class="popup popup-auth popup-hidden">
-              <form class="form-auth" action="https://echo.htmlacademy.ru" method="post">
-                <input class="form-auth__field form-field" type="text" name="auth" placeholder="Электронная почта" required>
-                <input class="form-auth__field form-field" type="password" name="password" placeholder="Пароль" required>
-                <div class="form-auth__footer">
-                  <input class="form-auth__submit-btn page-btn" type="submit" value="Войти">
-                  <div class="form-auth__list-links">
-                    <a class="form-auth__link link link_dark" href="#">Забыли пароль?</a>
-                    <a class="form-auth__link link link_dark" href="#">Новая регистрация</a>
+          <ul class="user-nav nav__list">
+            <li class="nav__item">
+              <button class="button button_view_glass nav__link nav__link_search" href="#">
+                <span class="visually-hidden">Поиск</span>
+              </button>
+            <!-- Форма поиска -->
+              <div class="popup popup-search popup-hidden">
+                <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
+                  <input class="form-field" type="search" name="search" placeholder="Что ищем?">
+                </form>
+              </div>
+            <!-- Форма поиска -->
+            </li>
+            <li class="nav__item">
+              <a class="button button_view_glass nav__link nav__link_auth" href="#">Вход</a>
+            <!-- Форма авторизации -->
+              <div class="popup popup-auth popup-hidden">
+                <form class="form-auth" action="https://echo.htmlacademy.ru" method="post">
+                  <input class="form-auth__field form-field" type="text" name="auth" placeholder="Электронная почта" required>
+                  <input class="form-auth__field form-field" type="password" name="password" placeholder="Пароль" required>
+                  <div class="form-auth__footer">
+                    <input class="form-auth__submit-btn page-btn" type="submit" value="Войти">
+                    <div class="form-auth__list-links">
+                      <a class="form-auth__link link link_dark" href="#">Забыли пароль?</a>
+                      <a class="form-auth__link link link_dark" href="#">Новая регистрация</a>
+                    </div>
                   </div>
-                </div>
-              </form>
-            </div>
-          <!-- Форма авторизации -->
-          </li>
-          <li class="nav__item">
-            <a class="button button_view_glass nav__link nav__link_cart" href="#" >2 товара</a>
-          <!-- Корзина -->
-            <div class="popup popup-cart popup-hidden">
-              <table class="order-table">
-                <tbody class="">
-                  <tr class="cart-order__product card-product">
-                    <td class="">
-                      <button class="btn-remove" type="button">
-                        <span class="visually-hidden">Удалить</span>
-                      </button>
-                    </td>
-                    <td class="card-product__photo">
-                      <img class="" src="img/orange-jam-small.jpg" width="33" height="33" alt="Фотография мороженого">
-                    </td>
-                    <td class="">Пломбир с апельсиновым джемом</td>
-                    <td class="">1,5кг</td>
-                    <td class="">x</td>
-                    <td class="">200 руб.</td>
-                    <td class="">300 руб.</td>
-                  </tr>
-                  <tr class="cart-order__product card-product">
-                    <td class="">
-                      <button class="btn-remove" type="button">
-                        <span class="visually-hidden">Удалить</span>
-                      </button>
-                    </td>
-                    <td class="">
-                      <img class="card-product__photo" src="img/strawberry-small.jpg" width="33" height="33" alt="Фотография мороженого">
-                    </td>
-                    <td class="">Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td class="">1,5кг</td>
-                    <td class="">х</td>
-                    <td class="">300 руб.</td>
-                    <td class="">450 руб.</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr class="cart-order__sum">
-                    <td colspan="6">Итого:</td>
-                    <td>750 руб.</td>
-                  </tr>
-                </tfoot class="">
-              </table>
-              <a class="page-btn" href="">Оформить заказ</a>
-            </div>
-          <!-- Корзина -->
-          </li>
-        </ul>
+                </form>
+              </div>
+            <!-- Форма авторизации -->
+            </li>
+            <li class="nav__item">
+              <a class="button button_view_glass nav__link nav__link_cart" href="#" >2 товара</a>
+            <!-- Корзина -->
+              <div class="popup popup-cart popup-hidden">
+                <table class="order-table">
+                  <tbody class="">
+                    <tr class="cart-order__product card-product">
+                      <td class="">
+                        <button class="btn-remove" type="button">
+                          <span class="visually-hidden">Удалить</span>
+                        </button>
+                      </td>
+                      <td class="card-product__photo">
+                        <img class="" src="img/orange-jam-small.jpg" width="33" height="33" alt="Фотография мороженого">
+                      </td>
+                      <td class="">Пломбир с апельсиновым джемом</td>
+                      <td class="">1,5кг</td>
+                      <td class="">x</td>
+                      <td class="">200 руб.</td>
+                      <td class="">300 руб.</td>
+                    </tr>
+                    <tr class="cart-order__product card-product">
+                      <td class="">
+                        <button class="btn-remove" type="button">
+                          <span class="visually-hidden">Удалить</span>
+                        </button>
+                      </td>
+                      <td class="">
+                        <img class="card-product__photo" src="img/strawberry-small.jpg" width="33" height="33" alt="Фотография мороженого">
+                      </td>
+                      <td class="">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="">1,5кг</td>
+                      <td class="">х</td>
+                      <td class="">300 руб.</td>
+                      <td class="">450 руб.</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="cart-order__sum">
+                      <td colspan="6">Итого:</td>
+                      <td>750 руб.</td>
+                    </tr>
+                  </tfoot class="">
+                </table>
+                <a class="page-btn" href="">Оформить заказ</a>
+              </div>
+            <!-- Корзина -->
+            </li>
+          </ul>
+        </nav>
       </div>
       <div class="header__footer">
         <!-- Хлебные крошки -->

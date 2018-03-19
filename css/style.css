@@ -15,10 +15,6 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-}
-
 /*Глобальные стили элементы*/
 @font-face {
   font-family: 'Roboto', Arial, sans-serif;
@@ -45,23 +41,30 @@ body {
   margin-bottom: 40px;
 }
 
-[class*="popup-"] {
-  display: none;
+.popup-hidden {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  clip: rect(0 0 0 0);
 }
 
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
+.visually-hidden:not(:focus):not(:active):not(:hover),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .page-btn {
-  display: block;
+  display: inline-block;
   min-height: 44px;
   padding: 10px 17px;
   font-size: 18px;
@@ -204,10 +207,11 @@ body {
 .nav {
   display: flex;
   align-items: flex-start;
+  width: 100%;
 }
 
-.nav__logo {
-  max-height: 64px;
+.logo__img {
+  display: block;
 }
 
 .button {
@@ -230,6 +234,10 @@ body {
   background-color: #f6f4f8;
 }
 
+.button_view_link:hover::after, .button_view_link:focus::after {
+  display: none;
+}
+
 .button_view_link:active {
   background-color: #ededed;
   background-origin: border-box;
@@ -244,15 +252,6 @@ body {
   right: 14px;
   height: 1px;
   background: rgba(255, 255, 255, 0.3);
-}
-
-.button_view_link_current {
-  background-color: #cf6f57;
-}
-
-.button_view_link_current::after {
-  content: '';
-  display: none;
 }
 
 .button_view_glass {
@@ -275,12 +274,18 @@ body {
 
 .nav__link:hover + .nav__sub-nav,
 .nav__link:focus + .nav__sub-nav,
-.nav__link:active + .nav__sub-nav {
-  display: block;
+.nav__link:active + .nav__sub-nav,
+.nav__sub-nav:focus-within {
+  overflow: auto;
+  width: auto;
+  height: auto;
+  clip: auto;
 }
 
 .nav__sub-nav {
-  display: none;
+  overflow: hidden;
+  width: 0;
+  height: 0;
   position: absolute;
   left: -6px;
   top: 38px;
@@ -299,12 +304,25 @@ body {
   position: relative;
 }
 
+.user-nav {
+  margin-left: auto;
+}
+
 .user-nav .nav__item + .nav__item {
   margin-left: 10px;
 }
 
 .nav__link {
   white-space: nowrap;
+}
+
+.nav__link_current {
+  background-color: #cf6f57;
+}
+
+.nav__link_current::after {
+  content: '';
+  display: none;
 }
 
 .nav__link_search {
@@ -315,12 +333,6 @@ body {
 
 .nav__link_search:hover, .nav__link_search:focus, .nav__link_search:active {
   background-image: url("../img/loupe_dark.svg");
-}
-
-.nav__link_search:hover + .popup-search,
-.nav__link_search:focus + .popup-search,
-.nav__link_search:active + .popup-search {
-  display: block;
 }
 
 .nav__link_auth {
@@ -337,7 +349,10 @@ body {
 .nav__link_auth:hover + .popup-auth,
 .nav__link_auth:focus + .popup-auth,
 .nav__link_auth:active + .popup-auth {
-  display: block;
+  overflow: auto;
+  width: auto;
+  height: auto;
+  clip: auto;
 }
 
 .nav__link_cart {
@@ -354,12 +369,6 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.nav__link_cart:hover + .popup-cart,
-.nav__link_cart:focus + .popup-cart,
-.nav__link_cart:active + .popup-cart {
-  display: block;
-}
-
 .nav__link_cart-empty {
   min-width: 117px;
   padding-left: 45px;
@@ -370,6 +379,36 @@ body {
 
 .nav__link_cart-empty:hover, .nav__link_cart-empty:focus {
   background-image: url("../img/basket_dark.svg");
+}
+
+.nav__link__search:hover + .popup-search,
+.nav__link__search:focus + .popup-search,
+.nav__link__search:active + .popup-search,
+.popup-search:focus-within {
+  overflow: auto;
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+.nav__link__auth:hover + .popup-auth,
+.nav__link__auth:focus + .popup-auth,
+.nav__link__auth:active + .popup-auth,
+.popup-auth:focus-within {
+  overflow: auto;
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+.nav__link__cart:hover + .popup-cart,
+.nav__link__cart:focus + .popup-cart,
+.nav__link__cart:active + .popup-cart,
+.popup-cart:focus-within {
+  overflow: auto;
+  width: auto;
+  height: auto;
+  clip: auto;
 }
 
 .sub-nav {
@@ -424,12 +463,6 @@ body {
   right: 9px;
   height: 1px;
   background: rgba(53, 53, 53, 0.2);
-}
-
-.main-nav__link:hover .site-nav__sub-nav,
-.main-nav__link:focus + .site-nav__sub-nav,
-.main-nav__link:active + .site-nav__sub-nav {
-  display: block;
 }
 
 .header__footer {
@@ -844,6 +877,8 @@ body {
 
 .promo-slid__img {
   position: absolute;
+  display: block;
+  object-fit: none;
   top: 0;
   z-index: -1;
 }
@@ -927,10 +962,11 @@ body {
 
 .product:hover::after, .product:focus::after {
   content: "";
-  width: 110%;
-  height: 125%;
   position: absolute;
   top: -7px;
+  bottom: -77px;
+  left: -5%;
+  right: -5%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -940,7 +976,7 @@ body {
 .product:hover > .product__btn,
 .product:focus > .product__btn {
   position: absolute;
-  bottom: -18%;
+  bottom: -55px;
   display: block;
 }
 
@@ -1364,6 +1400,7 @@ body {
 
 .filter__list {
   display: flex;
+  align-content: center;
   margin: 0;
   padding: 2px 20px 2px 15px;
   min-height: 36px;
@@ -1388,8 +1425,9 @@ select.filter__list option {
 }
 
 .filter__item {
-  display: inline-block;
+  position: relative;
   margin: auto;
+  padding-left: 25px;
 }
 
 .filter__item ~ .filter__item {
@@ -1397,15 +1435,15 @@ select.filter__list option {
 }
 
 .filter__item_radio::before {
+  position: absolute;
   content: "";
-  display: inline;
-  padding-right: 32px;
-  min-width: 23px;
-  min-height: 23px;
+  left: 0;
+  width: 23px;
+  height: 23px;
   background-image: url("../img/radio-off.svg");
   background-size: 22px 22px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 0 0;
   opacity: 0.5;
 }
 
@@ -1414,15 +1452,15 @@ select.filter__list option {
 }
 
 .filter__item_checkbox::before {
+  position: absolute;
   content: "";
-  display: inline;
-  padding-right: 32px;
-  min-width: 21px;
-  min-height: 21px;
+  left: 0;
+  width: 24px;
+  height: 21px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
-  background-position: center;
+  background-position: 0 0;
   opacity: 0.5;
 }
 
@@ -1644,3 +1682,4 @@ input:disabled + .filter__item {
   margin: 0;
   padding: 0;
 }
+/*# sourceMappingURL=style.css.map */
