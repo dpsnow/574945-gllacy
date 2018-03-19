@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Каталог сливочного морожного магазина Глэйси">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
@@ -157,12 +158,14 @@
           <form class="form-filters" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form-filters__item filter">
               <legend class="form-filters__legend">Сортировка:</legend>
-                <select class="filter__list filter__list_dropdown" name="sort">
-                  <option value="popularity">по популярности</option>
-                  <option value="cheap">сначала недорогие</option>
-                  <option value="expensive">сначала дорогие</option>
-                  <option value="fat">по жирности</option>
-                </select>
+                <div class="select-wrap">
+                  <select class="filter__list filter__list_dropdown" name="sort">
+                    <option value="popularity">по популярности</option>
+                    <option value="cheap">сначала недорогие</option>
+                    <option value="expensive">сначала дорогие</option>
+                    <option value="fat">по жирности</option>
+                  </select>
+                </div>
             </fieldset>
             <fieldset class="form-filters__item filter">
               <legend class="form-filters__legend">Цена: 100 руб. – 500 руб.</legend>
