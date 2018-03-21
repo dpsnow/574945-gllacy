@@ -167,11 +167,11 @@
                   </select>
                 </div>
             </fieldset>
-            <fieldset class="form-filters__item filter">
-              <legend class="form-filters__legend">Цена: 100 руб. – 500 руб.</legend>
-              <div class="filter__list">
-                <input class="filter__item" type="range" min="1" max="10">
-                <!-- <input class="filter__item" type="range" min="1" max="10"> -->
+            <fieldset class="form-filters__item filter range-slider">
+              <legend class="form-filters__legend range-slider__values">Цена: 100 руб. – 500 руб.</legend>
+              <div class="filter__list range-slider__box">
+                <input class="filter__item range-slider__control" type="range" min="0" max="990" step="10" value="100">
+                <input class="filter__item range-slider__control" type="range" min="10" max="1000" step="10" value="500">
               </div>
             </fieldset>
             <fieldset class="form-filters__item filter">
@@ -421,5 +421,6 @@
            © 2017</p>
         </div>
     </footer>
+    <script src="./js/slides.js"></script>
   </body>
 </html>
