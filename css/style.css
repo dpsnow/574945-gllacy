@@ -1745,82 +1745,85 @@ input:disabled + .filter__item {
 /* range slider */
 .range-slider {
   position: relative;
-  /*width: 200px;*/
-  /*height: 35px;*/
-  /*text-align: center;*/
 }
 
 .range-slider .range-slider__control {
-  pointer-events: none;
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
   position: absolute;
   left: 0;
   right: 0;
-  height: 18px;
+  width: 100%;
+  /* Full-width */
+  height: 4px;
   margin: 0;
-  padding: 0 10px;
-  width: 100%;
+  padding: 0 14px;
+  background: none;
   outline: none;
+  /* Remove outline */
+  pointer-events: none;
 }
 
-.range-slider .range-slider__control::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  /* Hides the slider so custom styles can be added */
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-
+/*Стили для полузнка*/
+/*for WebKit*/
 .range-slider .range-slider__control::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  top: -8px;
   width: 20px;
   height: 20px;
   cursor: pointer;
-  margin-top: -14px;
+  background-color: transparent;
   background-image: url("../img/filter-button.svg");
   background-repeat: no-repeat;
   pointer-events: all;
-  z-index: 1;
-  position: relative;
+  opacity: 0.8;
 }
 
+.range-slider .range-slider__control::-webkit-slider-thumb:hover {
+  opacity: 1;
+}
+
+/*for Firefox*/
 .range-slider .range-slider__control::-moz-range-thumb {
   width: 20px;
   height: 20px;
   cursor: pointer;
   border: 0;
+  background-color: transparent;
   background-image: url("../img/filter-button.svg");
   background-repeat: no-repeat;
   pointer-events: all;
-  z-index: 1;
-  position: relative;
-  /*width: 9px;*/
+  opacity: 0.8;
 }
 
-.range-slider .range-slider__control::-ms-thumb {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  border: 0;
-  background-image: url("../img/filter-button.svg");
-  background-repeat: no-repeat;
+.range-slider .range-slider__control::-moz-range-thumb:hover {
+  opacity: 1;
 }
 
-.range-slider .range-slider__control::-moz-range-track {
-  position: relative;
-  z-index: -1;
+/*Трек*/
+.range-slider .range-slider__control::-webkit-slider-runnable-track {
+  height: 4px;
   background-color: rgba(255, 255, 255, 0.5);
   border: 0;
 }
 
+.range-slider .range-slider__control::-moz-range-track {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0;
+}
+
+/*Скрыть трек последнего range */
+.range-slider .range-slider__control:last-of-type::-webkit-slider-runnable-track {
+  background: none;
+  border: 0;
+}
+
 .range-slider .range-slider__control:last-of-type::-moz-range-track {
-  -moz-appearance: none;
-  background: none transparent;
+  background: none;
   border: 0;
 }
-
-.range-slider .range-slider__control::-moz-focus-outer {
-  border: 0;
-}
-
-/* */
 /*# sourceMappingURL=style.css.map */
