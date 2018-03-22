@@ -84,47 +84,47 @@
                   <a class="button button_view_glass nav__link nav__link_cart" href="#" >2 товара</a>
                 <!-- Корзина -->
                   <div class="popup popup-cart popup-hidden">
-                    <table class="order-table">
-                      <tbody class="">
-                        <tr class="cart-order__product card-product">
-                          <td class="">
+                    <table class="popup-cart__table order">
+                      <tbody class="order__list">
+                        <tr class="order__row">
+                          <td class="order__cell order__cell_btn">
                             <button class="btn-remove" type="button">
                               <span class="visually-hidden">Удалить</span>
                             </button>
                           </td>
-                          <td class="card-product__photo">
-                            <img class="" src="img/orange-jam-small.jpg" width="33" height="33" alt="Фотография мороженого">
+                          <td class="order__cell">
+                            <img class="order__cell_photo" src="img/orange-jam.jpg" width="33" height="33" alt="Фотография мороженого">
                           </td>
-                          <td class="">Пломбир с апельсиновым джемом</td>
-                          <td class="">1,5кг</td>
-                          <td class="">x</td>
-                          <td class="">200 руб.</td>
-                          <td class="">300 руб.</td>
+                          <td class="order__cell order__cell_name">Пломбир с апельсиновым джемом</td>
+                          <td class="order__cell order__cell_weight">1,5кг</td>
+                          <td class="order__cell">×</td>
+                          <td class="order__cell order__cell_price">200 руб.</td>
+                          <td class="order__cell order__cell_cost">300 руб.</td>
                         </tr>
-                        <tr class="cart-order__product card-product">
-                          <td class="">
+                        <tr class="order__row card-product">
+                          <td class="order__cell order__cell_btn">
                             <button class="btn-remove" type="button">
                               <span class="visually-hidden">Удалить</span>
                             </button>
                           </td>
-                          <td class="">
-                            <img class="card-product__photo" src="img/strawberry-small.jpg" width="33" height="33" alt="Фотография мороженого">
+                          <td class="order__cell">
+                            <img class="order__cell_photo" src="img/strawberry.jpg" width="33" height="33" alt="Фотография мороженого">
                           </td>
-                          <td class="">Клубничный пломбир с присыпкой из белого шоколада</td>
-                          <td class="">1,5кг</td>
-                          <td class="">х</td>
-                          <td class="">300 руб.</td>
-                          <td class="">450 руб.</td>
+                          <td class="order__cell order__cell_name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                          <td class="order__cell order__cell_right">1,5кг</td>
+                          <td class="order__cell">×</td>
+                          <td class="order__cell order__cell_price">300 руб.</td>
+                          <td class="order__cell order__cell_cost">450 руб.</td>
                         </tr>
                       </tbody>
-                      <tfoot>
-                        <tr class="cart-order__sum">
-                          <td colspan="6">Итого:</td>
-                          <td>750 руб.</td>
+                      <tfoot class="order__total">
+                        <tr class="order__row">
+                          <td class="order__cell order__cell_total order__cell_right" colspan="6">Итого:</td>
+                          <td class="order__cell order__cell_total">750 руб.</td>
                         </tr>
-                      </tfoot class="">
+                      </tfoot>
                     </table>
-                    <a class="page-btn" href="">Оформить заказ</a>
+                    <a class="popup-cart__btn page-btn" href="">Оформить заказ</a>
                   </div>
                 <!-- Корзина -->
                 </li>
