@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/bloks.css"> -->
-    
+
     <title>Gllacy Shop</title>
   </head>
   <body>
@@ -51,7 +51,7 @@
               </ul>
               <ul class="user-nav nav__list">
                 <li class="nav__item">
-                  <button class="button button_view_glass nav__link nav__link_search" href="#">
+                  <button class="button button_view_glass nav__link nav__link_search" href="#" aria-label="Перейти на страницу поиска">
                     <span class="visually-hidden">Поиск</span>
                   </button>
                 <!-- Форма поиска -->
@@ -63,7 +63,7 @@
                 <!-- Форма поиска -->
                 </li>
                 <li class="nav__item">
-                  <a class="button button_view_glass nav__link nav__link_auth" href="#">Вход</a>
+                  <a class="button button_view_glass nav__link nav__link_auth" href="#" aria-label="Перейти в личный кабинет">Вход</a>
                 <!-- Форма авторизации -->
                   <div class="popup popup-auth popup-hidden">
                     <form class="form-auth" action="https://echo.htmlacademy.ru" method="post">
@@ -81,7 +81,7 @@
                 <!-- Форма авторизации -->
                 </li>
                 <li class="nav__item">
-                  <a class="button button_view_glass nav__link nav__link_cart" href="#" >2 товара</a>
+                  <a class="button button_view_glass nav__link nav__link_cart" href="#" aria-label="Посмотреть заказ">2 товара</a>
                 <!-- Корзина -->
                   <div class="popup popup-cart popup-hidden">
                     <table class="popup-cart__table order">
@@ -180,14 +180,14 @@
                   <fieldset class="form-filters__item filter">
                     <legend class="filter__legend">Жирность:</legend>
                     <div class="filter__list">
-                      <input class="visually-hidden" id="fat-0" type="radio" name="fat" value="0%">
-                      <label class="filter__item filter__item_radio" for="fat-0">0%</label>
-                      <input class="visually-hidden" id="fat-10%" type="radio" name="fat" value="up to 10%" checked>
-                      <label class="filter__item filter__item_radio" for="fat-10%">до 10%</label>
-                      <input class="visually-hidden" id="fat-30%" type="radio" name="fat" value="up to 30%">
-                      <label class="filter__item filter__item_radio" for="fat-30%">до 30%</label>
-                      <input class="visually-hidden" id="fat-from-30%" type="radio" name="fat" value="from 30%" disabled>
-                      <label class="filter__item filter__item_radio" for="fat-from-30%">выше 30%</label>
+                      <input class="filter__input filter__input_type_radio visually-hidden" id="fat-0" type="radio" name="fat" value="0%">
+                      <label class="filter__item filter__item_label_radio" for="fat-0">0%</label>
+                      <input class="filter__input filter__input_type_radio visually-hidden" id="fat-10%" type="radio" name="fat" value="up to 10%" checked>
+                      <label class="filter__item filter__item_label_radio" for="fat-10%">до 10%</label>
+                      <input class="filter__input filter__input_type_radio visually-hidden" id="fat-30%" type="radio" name="fat" value="up to 30%">
+                      <label class="filter__item filter__item_label_radio" for="fat-30%">до 30%</label>
+                      <input class="filter__input filter__input_type_radio visually-hidden" id="fat-from-30%" type="radio" name="fat" value="from 30%" disabled>
+                      <label class="filter__item filter__item_label_radio" for="fat-from-30%">выше 30%</label>
                     </div>
                   </fieldset>
                 </div>
@@ -195,16 +195,16 @@
                   <fieldset class="form-filters__item filter">
                     <legend class="filter__legend">Наполнители:</legend>
                     <div class="filter__list">
-                      <input class="visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
-                      <label class="filter__item filter__item_checkbox filters__item_disable" for="filler-chocolate">шоколадные</label>
-                      <input class="visually-hidden" type="checkbox" name="filler-sugar" id="filler-sugar" checked>
-                      <label class="filter__item filter__item_checkbox" for="filler-sugar">сахарные присыпки</label>
-                      <input class="visually-hidden" type="checkbox" name="filler-fruits" id="filler-fruits">
-                      <label class="filter__item filter__item_checkbox" for="filler-fruits">фрукты</label>
-                      <input class="visually-hidden" type="checkbox" name="filler-syrop" id="filler-syrop">
-                      <label class="filter__item filter__item_checkbox" for="filler-syrop">сиропы</label>
-                      <input class="visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
-                      <label class="filter__item filter__item_checkbox" for="filler-jam">джемы</label>
+                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-chocolate" type="checkbox" name="filler-chocolate" checked>
+                      <label class="filter__item filter__item_label_checkbox" for="filler-chocolate">шоколадные</label>
+                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-sugar"type="checkbox" name="filler-sugar" checked>
+                      <label class="filter__item filter__item_label_checkbox" for="filler-sugar">сахарные присыпки</label>
+                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-fruits" type="checkbox" name="filler-fruits" >
+                      <label class="filter__item filter__item_label_checkbox" for="filler-fruits">фрукты</label>
+                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-syrop" type="checkbox" name="filler-syrop" disabled>
+                      <label class="filter__item filter__item_label_checkbox" for="filler-syrop">сиропы</label>
+                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-jam" type="checkbox" name="filler-jam" >
+                      <label class="filter__item filter__item_label_checkbox" for="filler-jam">джемы</label>
                     </div>
                   </fieldset>
                   <input class="form-filters__item form-filters__btn" type="submit" value="Применить">

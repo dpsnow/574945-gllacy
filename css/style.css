@@ -213,7 +213,6 @@ body {
   color: transparent;
 }
 
-/* новые стили для header*/
 .page-header {
   padding: 10px 2.25% 0 2.25%;
 }
@@ -566,258 +565,6 @@ body {
   margin-left: auto;
 }
 
-/* Старые стили для header
-
-.page-header {
-  padding: 10px 27px 0 27px;
-}
-
-.header__nav {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.site-nav {
-  display: flex;
-}
-
-.site-nav__logo {
-  margin-right: 10px;
-}
-
-.site-nav__main-nav {
-  padding: 0;
-}
-
-.main-nav {
-  margin: 0;
-  padding: 0;
-  padding-top: 20px;
-  display: flex;
-  list-style: none;
-  white-space: nowrap;
-  color: $clr-head;
-}
-
-.main-nav__item {
-  position: relative;
-}
-
-.main-nav__link {
-  font-weight: $bold;
-  padding: 6px 14px 7px 14px;
-  // box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3);
-  &:hover,
-  &:focus {
-    color: $clr-main;
-    background-color: #f6f4f8;
-    border-radius: 32px;
-  }
-  &:active {
-    background-color: #ededed;
-    background-origin: border-box;
-    box-shadow: inset 0 2px 2px #696969;
-  }
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    // bottom: 6px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.3);
-  }
-  &_current {
-    background-color: #cf6f57;
-    border-radius: 32px;
-    &::after {
-      content: "";
-      display: none;
-    }
-  }
-}
-
-.site-nav__sub-nav {
-  position: absolute;
-  left: -6px;
-  top: 31px;
-  z-index: 1;
-  display: none;
-}
-
-// не изменилось
-// Внутр. меню
-.sub-nav {
-  padding: 5px 0;
-  margin: 0;
-  font-size: 14px;
-  font-weight: normal;
-  white-space: nowrap;
-  color: $clr-main;
-  background-color: #f8f7f4;
-  border-radius: 5px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-  list-style: none;
-}
-
-.sub-nav__item {
-  margin: 1px 0;
-}
-
-.sub-nav__link {
-  display: inherit;
-  padding: 7px 21px;
-  &:hover,
-  &:focus {
-    background-color: #fbded7;
-  }
-  &:active {
-    background-color: #f6b5a5;
-  }
-  &_current {
-    color: $clr-head;
-    background-color: #d07058;
-    &:hover {
-      background-color: #d07058;
-    }
-  }
-}
-
-.sub-nav__item_special {
-  position: relative;
-  font-weight: $bold;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 9px;
-    right: 9px;
-    height: 1px;
-    background: rgba(53, 53, 53, 0.2);
-  }
-}
-
-// Показать sub-nav
-.main-nav__link:hover .site-nav__sub-nav,
-.main-nav__link:focus + .site-nav__sub-nav,
-.main-nav__link:active + .site-nav__sub-nav {
-  display: block;
-}
-
-// .main-nav__item_dropdown {
-//   &:hover > .site-nav__sub-nav,
-//   &:focus > .site-nav__sub-nav,
-//   &:active > .site-nav__sub-nav {
-//     display: block;
-//   }
-// }
-
-
-// Навигация пользователя
-// теперь .nav__list
-.user-nav {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  padding-top: 13px;
-  list-style: none;
-}
-
-.user-nav__item {
-  position: relative;
-  display: block;
-  margin-right: 10px;
-}
-// теперь .button_view_glass
-.user-nav__btn {
-  display: block;
-  min-height: 32px;
-  min-width: 32px;
-  padding: 7px 15px;
-  font-size: 14px;
-  font-weight: $medium;
-  color: $clr-head;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 32px;
-  &:hover,
-  &:focus {
-    color: $clr-main;
-    background-color: #f6f4f8;
-  }
-}
-
-.user-nav__item:last-of-type {
-  margin-right: 0;
-}
-
-.user-nav__btn_search {
-  background-image: url("../img/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  &:hover,
-  &:focus,
-  &:active {
-    background-image: url("../img/loupe_dark.svg");
-  }
-  &:hover~.popup-search,
-  &:focus~.popup-search,
-  &:active~.popup-search,
-    {
-    display: block;
-  }
-}
-
-.user-nav__btn_auth {
-  padding-left: 45px;
-  background-image: url("../img/entrance.svg");
-  background-repeat: no-repeat;
-  background-position: 17px center;
-  &:hover,
-  &:focus {
-    background-image: url("../img/entrance_dark.svg");
-  }
-  &:hover+.popup-auth,
-  &:focus+.popup-auth,
-  &:active+.popup-auth,
-    {
-    display: block;
-  }
-}
-
-.user-nav__btn_cart {
-  min-width: 117px;
-  padding-left: 45px;
-  color: $clr-main;
-  background-color: #f8f7f4;
-  background-image: url("../img/basket-red.svg");
-  background-repeat: no-repeat;
-  background-position: 17px center;
-  &:hover,
-  &:focus {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  &:hover+.popup-cart,
-  &:focus+.popup-cart,
-  &:active+.popup-cart,
-    {
-    display: block;
-  }
-  &-empty {
-    min-width: 117px;
-    padding-left: 45px;
-    background-image: url("../img/basket.svg");
-    background-repeat: no-repeat;
-    background-position: 17px center;
-    &:hover,
-    &:focus {
-      background-image: url("../img/basket_dark.svg");
-    }
-  }
-}
-Старые стили для header */
-/*popup user-nav*/
 .popup {
   position: absolute;
   top: 38px;
@@ -1650,7 +1397,7 @@ body {
   background-color: white;
 }
 
-select.filter__list option {
+.filter__list option {
   font-size: 14px;
   color: #323232;
 }
@@ -1692,7 +1439,7 @@ select.filter__list option {
   margin-left: 24px;
 }
 
-.filter__item_radio::before {
+.filter__item_label_radio::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1708,12 +1455,12 @@ select.filter__list option {
   opacity: 0.8;
 }
 
-.filter__item_radio:hover::before,
-.filter__item_radio:focus::before {
+.filter__item_label_radio:hover::before,
+.filter__item_label_radio:focus::before {
   opacity: 1;
 }
 
-.filter__item_checkbox::before {
+.filter__item_label_checkbox::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1729,33 +1476,33 @@ select.filter__list option {
   opacity: 0.8;
 }
 
-.filter__item_checkbox:hover::before,
-.filter__item_checkbox:focus::before {
+.filter__item_label_checkbox:hover::before,
+.filter__item_label_checkbox:focus::before {
   opacity: 1;
 }
 
 /*Состояние наведения с клавиатуры*/
-input[type="radio"]:focus + .filter__item_radio::before {
+.filter__input_type_radio:focus + .filter__item_label_radio::before {
   opacity: 1;
 }
 
-input[type="radio"]:checked + .filter__item_radio::before {
+.filter__input_type_radio:checked + .filter__item_label_radio::before {
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-size: 22px 22px;
 }
 
-input[type="checkbox"]:focus + .filter__item_checkbox::before {
+.filter__input_type_checkbox:focus + .filter__item_label_checkbox::before {
   opacity: 1;
 }
 
-input[type="checkbox"]:checked + .filter__item_checkbox::before {
+.filter__input_type_checkbox:checked + .filter__item_label_checkbox::before {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-size: 24px 20px;
 }
 
-input:disabled + .filter__item {
+.filter__input:disabled + .filter__item {
   opacity: 0.4;
 }
 
