@@ -11,6 +11,7 @@ modalLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal.classList.add("modal-overlay");
   modalFeedback.classList.add("modal-show");
+  feedbackFormValid.noValidate = true;
 });
 
 modalClose.addEventListener("click", function (evt) {
@@ -18,6 +19,7 @@ modalClose.addEventListener("click", function (evt) {
   modal.classList.remove("modal-overlay");
   modalFeedback.classList.remove("modal-show");
   modalFeedback.classList.remove("modal-error");
+  
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -32,10 +34,12 @@ window.addEventListener("keydown", function (evt) {
 });
 
 feedbackFormValid.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  if (feedbackFormValid.checkValidity()) {
+  var formField = evt.target;
+  if (!formField[0].checkValidity() || !formField[1].checkValidity() || !formField[2].checkValidity()) {
+    evt.preventDefault();
     modalFeedback.classList.remove("modal-error");
     modalFeedback.offsetWidth = modalFeedback.offsetWidth;
     modalFeedback.classList.add("modal-error");
+    feedbackFormValid.noValidate = false;
   }
 });
