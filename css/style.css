@@ -1806,7 +1806,7 @@ body {
   }
 }
 
-@keyframes come {
+@keyframes fade {
   0% {
     opacity: 0;
   }
@@ -1840,7 +1840,7 @@ body {
 
 .modal-overlay {
   display: block;
-  animation: come 0.6s;
+  animation: fade 0.6s;
 }
 
 .modal-overlay::before {

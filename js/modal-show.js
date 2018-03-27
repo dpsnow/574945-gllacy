@@ -9,14 +9,12 @@ var feedbackFormValid = modal.querySelector(".feedback-modal__form");
 
 modalLink.addEventListener("click", function (evt) {
   evt.preventDefault();
-  // modal.classList.add("modal-overlay");
   modal.classList.add("modal-overlay");
   modalFeedback.classList.add("modal-show");
 });
 
 modalClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  // modal.classList.remove("modal-overlay");
   modal.classList.remove("modal-overlay");
   modalFeedback.classList.remove("modal-show");
   modalFeedback.classList.remove("modal-error");

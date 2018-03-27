@@ -13,17 +13,6 @@ ymaps.ready(function () {
         iconImageHref: 'img/map-pin.svg',
         iconImageSize: [80, 140],
         iconImageOffset: [-40, -140]
-        // Определим интерактивную область над картинкой.
-        // iconShape: {
-        //   type: 'Polygon',
-        //   coordinates: [
-        //   ],
-        // },
-        // Тень
-        // iconShadowLayout: 'default#image',
-        // iconShadowHref: 'img/map-pin-shadow.png',
-        // iconShadowImageSize: [182, 110],
-        // iconShadowImageOffset: [0, -110]
       }),
       // Тень как еще одна метка - переделать
       myPlacemarkShadow = new ymaps.Placemark([59.938631, 30.323055], {
@@ -34,7 +23,6 @@ ymaps.ready(function () {
         iconImageOffset: [0, -110],
         cursor: 'default'
       });
-      
     myMap.behaviors
       // Отключаем изменение масштаба колесом мыши
       .disable(['scrollZoom']);
