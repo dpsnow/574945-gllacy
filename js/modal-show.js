@@ -31,11 +31,20 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+// 1. Отключаем нативную валидацию браузером
+feedbackFormValid.noValidate = true;
+
+// 2. Ловим событие отправки формы
 feedbackFormValid.addEventListener("submit", function (evt) {
+  var form = evt.target;
+  // 3. И сразу отменяем его, т. к. нам нужно сделать проверки
   evt.preventDefault();
-  if (feedbackFormValid.checkValidity()) {
+  // 4. Если какое-то из 3-х полей содержит ошибку:
+  if ( !form[0].checkValidity() || !form[1].checkValidity() || !form[2].value ) {
     modalFeedback.classList.remove("modal-error");
     modalFeedback.offsetWidth = modalFeedback.offsetWidth;
     modalFeedback.classList.add("modal-error");
+  } else { // 5. Если ошибки нет — отправляем
+    form.sumbit();
   }
 });
