@@ -292,7 +292,7 @@ body {
   background-color: #f6f4f8;
 }
 
-.header__logo {
+.nav__logo {
   margin-right: 10px;
 }
 
@@ -708,7 +708,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 490px;
+  height: 485px;
   color: #ffffff;
 }
 
@@ -733,7 +733,7 @@ body {
 }
 
 .slide__title {
-  max-width: 670px;
+  max-width: 675px;
   margin: 0 auto 30px auto;
   font-weight: 700;
   font-size: 60px;
@@ -1317,6 +1317,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: inherit;
+  white-space: nowrap;
 }
 
 .form-filters__btn {
@@ -1327,6 +1328,8 @@ body {
   min-height: 36px;
   padding: 5px 15px;
   font-weight: 700;
+  font-size: 16px;
+  font-family: inherit;
   color: inherit;
   white-space: nowrap;
   background: rgba(255, 255, 255, 0.2);
@@ -1347,20 +1350,87 @@ body {
   box-shadow: inset 0 2px 1px 0 #696969;
 }
 
+.price-range {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.price-range__legend {
+  padding-right: 10px;
+}
+
+.price-range__value {
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.price-range_controls {
+  position: relative;
+}
+
+.price-range__scale {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.price-range__bar {
+  position: relative;
+  left: 35px;
+  width: 50%;
+  height: 4px;
+  background-color: #f8f7f4;
+}
+
+.price-range__control {
+  position: absolute;
+  top: 8px;
+}
+
+.price-range__control_min {
+  left: 35px;
+}
+
+.price-range__control_max {
+  right: 65px;
+}
+
+.toggle {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+}
+
 .filter__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 36px;
+  height: 36px;
   margin: 0;
-  padding: 2px 15px 2px 15px;
+  padding: 2px 20px 2px 15px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 20px;
 }
 
 .filter__list_dropdown {
-  width: 100%;
+  min-width: 194px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.13;
@@ -1429,13 +1499,12 @@ body {
   padding-left: 30px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 2;
   color: #ffffff;
   white-space: nowrap;
 }
 
 .filter__item ~ .filter__item {
-  margin-left: 24px;
+  margin-left: 20px;
 }
 
 .filter__item_label_radio::before {
@@ -1696,100 +1765,6 @@ body {
 .copyright__text {
   margin: 0;
   padding: 0;
-}
-
-/* range slider */
-.range-slider {
-  position: relative;
-}
-
-.range-slider .range-slider__control {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  /* Full-width */
-  height: 4px;
-  margin: auto;
-  padding: 0 14px;
-  background: none;
-  outline: none;
-  /* Remove outline */
-  pointer-events: none;
-
-  -webkit-appearance: none;
-  /* Override default CSS styles */
-          appearance: none;
-}
-
-/*Стили для полузнка*/
-.range-slider__box {
-  position: relative;
-  min-width: 200px;
-}
-
-/*for WebKit*/
-.range-slider .range-slider__control::-webkit-slider-thumb {
-  position: relative;
-  top: -8px;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url("../img/filter-button.svg");
-  background-repeat: no-repeat;
-  cursor: pointer;
-  opacity: 0.8;
-  pointer-events: all;
-
-  -webkit-appearance: none;
-          appearance: none;
-}
-
-.range-slider .range-slider__control::-webkit-slider-thumb:hover {
-  opacity: 1;
-}
-
-/*for Firefox*/
-.range-slider .range-slider__control::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url("../img/filter-button.svg");
-  background-repeat: no-repeat;
-  border: 0;
-  cursor: pointer;
-  opacity: 0.8;
-  pointer-events: all;
-}
-
-.range-slider .range-slider__control::-moz-range-thumb:hover {
-  opacity: 1;
-}
-
-/*Трек*/
-.range-slider .range-slider__control::-webkit-slider-runnable-track {
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 0;
-}
-
-.range-slider .range-slider__control::-moz-range-track {
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 0;
-}
-
-/*Скрыть трек последнего range */
-.range-slider .range-slider__control:last-of-type::-webkit-slider-runnable-track {
-  background: none;
-  border: 0;
-}
-
-.range-slider .range-slider__control:last-of-type::-moz-range-track {
-  background: none;
-  border: 0;
 }
 
 @keyframes bounce {
