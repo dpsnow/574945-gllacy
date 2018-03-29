@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Каталог сливочного морожного магазина Глэйси">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Gllacy Shop</title>
   </head>
   <body>
@@ -51,17 +51,14 @@
                   <a class="button button_view_glass nav__link nav__link_search" href="#" aria-label="Перейти на страницу поиска">
                     <span class="visually-hidden">Поиск</span>
                   </a>
-                <!-- Форма поиска -->
                   <div class="popup popup-search popup-hidden">
                     <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
                       <input class="form-field" type="search" name="search" placeholder="Что ищем?">
                     </form>
                   </div>
-                <!-- Форма поиска -->
                 </li>
                 <li class="nav__item">
                   <a class="button button_view_glass nav__link nav__link_auth" href="#" aria-label="Перейти в личный кабинет">Вход</a>
-                <!-- Форма авторизации -->
                   <div class="popup popup-auth popup-hidden">
                     <form class="form-auth" action="https://echo.htmlacademy.ru" method="post">
                       <input class="form-auth__field form-field" type="text" name="auth" placeholder="Электронная почта" required>
@@ -75,11 +72,9 @@
                       </div>
                     </form>
                   </div>
-                <!-- Форма авторизации -->
                 </li>
                 <li class="nav__item">
                   <a class="button button_view_glass nav__link nav__link_cart" href="#" aria-label="Посмотреть заказ">2 товара</a>
-                <!-- Корзина -->
                   <div class="popup popup-cart popup-hidden">
                     <table class="popup-cart__table order">
                       <tbody class="order__list">
@@ -123,13 +118,11 @@
                     </table>
                     <a class="popup-cart__btn page-btn" href="">Оформить заказ</a>
                   </div>
-                <!-- Корзина -->
                 </li>
               </ul>
             </nav>
           </div>
           <div class="header__footer">
-            <!-- Хлебные крошки -->
             <ul class="header__breadcrumbs breadcrumbs">
               <li class="breadcrumbs__item">
                 <a class="link link_light" href="index.html">Главная</a>
@@ -139,33 +132,30 @@
               </li>
               <li class="breadcrumbs__item breadcrumbs__item_current">Сливочное</li>
             </ul>
-            <!-- Хлебные крошки -->
             <p class="header__contacts contacts">
-              С 10 до 20, ежедневно<br>
+              С 10 до 20, ежедневно
+              <br>
               <span class="contacts__phone">8 812 450-25-25</span>
             </p>
           </div>
-          
         </header>
-    
         <main class="">
-          
           <section class="catalog">
             <h1 class="catalog__title layout">Сливочное мороженое</h1>
             <div class="catalog__filters layout">
-            <!-- Форма для сортировки -->
+              <!-- Форма для сортировки -->
               <form class="form-filters" action="https://echo.htmlacademy.ru" method="post">
                 <div class="form-filters__inner">
                   <div class="form-filters__item filter">
                     <label class=" filter__legend" for="sort">Сортировка:</label>
-                      <div class="select-wrap">
-                        <select class="filter__list filter__list_dropdown" name="sort" id="sort">
-                          <option value="popularity">по популярности</option>
-                          <option value="cheap">сначала недорогие</option>
-                          <option value="expensive">сначала дорогие</option>
-                          <option value="fat">по жирности</option>
-                        </select>
-                      </div>
+                    <div class="select-wrap">
+                      <select class="filter__list filter__list_dropdown" name="sort" id="sort">
+                        <option value="popularity">по популярности</option>
+                        <option value="cheap">сначала недорогие</option>
+                        <option value="expensive">сначала дорогие</option>
+                        <option value="fat">по жирности</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="form-filters__item filter price-range">
                     <div class="filter__legend price-range__legend">
@@ -208,23 +198,20 @@
                       <label class="filter__item filter__item_label_checkbox" for="filler-chocolate">шоколадные</label>
                       <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-sugar" type="checkbox" name="filler-sugar" checked>
                       <label class="filter__item filter__item_label_checkbox" for="filler-sugar">сахарные присыпки</label>
-                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-fruits" type="checkbox" name="filler-fruits" >
+                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-fruits" type="checkbox" name="filler-fruits">
                       <label class="filter__item filter__item_label_checkbox" for="filler-fruits">фрукты</label>
                       <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-syrop" type="checkbox" name="filler-syrop" disabled>
                       <label class="filter__item filter__item_label_checkbox" for="filler-syrop">сиропы</label>
-                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-jam" type="checkbox" name="filler-jam" >
+                      <input class="filter__input filter__input_type_checkbox visually-hidden" id="filler-jam" type="checkbox" name="filler-jam">
                       <label class="filter__item filter__item_label_checkbox" for="filler-jam">джемы</label>
                     </div>
                   </fieldset>
                   <input class="form-filters__item form-filters__btn" type="submit" value="Применить">
                 </div>
               </form>
-              <!-- Форма для сортировки -->
             </div>
-    
             <div class="catalog__result layout">
               <h2 class="visually-hidden">Найденные позиции</h2>
-              <!-- Товары -->
               <ol class="catalog__list">
                 <li class="product catalog__item" tabindex="0">
                   <h3 class="product__name">
@@ -388,47 +375,55 @@
               <!-- Пагинатор -->
             </div>
           </section>
-    
+
         </main>
         <!-- Футер -->
         <footer class="page-footer footer">
-            <ul class="footer__social social">
-              <li class="social__item">
-                <a class="social__btn social__btn_tw" href=""><span class="visually-hidden">Twitter</span></a>
-              </li>
-              <li class="social__item">
-                <a class="social__btn social__btn_int" href=""><span class="visually-hidden">Instagram</span></a>
-              </li>
-              <li class="social__item">
-                <a class="social__btn social__btn_fb" href=""><span class="visually-hidden">Facebook</span></a>
-              </li>
-              <li class="social__item">
-                <a class="social__btn social__btn_vk" href=""><span class="visually-hidden">Вконтакте</span></a>
-              </li>
-            </ul>
-    
-            <ul class="footer__info info-links">
-              <li class="info-links__item">
-                <a class="link link_light" href="">
-                  <b class="info-links__item_special">Для поставщиков</b>
-                </a>
-              </li>
-              <li class="info-links__item">
-                <a class="link link_light" href="">О производстве</a>
-              </li>
-              <li class="info-links__item">
-                <a class="link link_light" href="">Наши документы</a>
-              </li>
-              <li class="info-links__item">
-                <a class="link link_light" href="">Экологические стандарты</a>
-              </li>
-            </ul>
-            <div class="footer__copyright copyright">
-              <img class="copyright__logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
-              <p class="copyright__text">Сделано в
-                <a class="copyright__link link link_light" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-               © 2017</p>
-            </div>
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="social__btn social__btn_tw" href="">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__btn social__btn_int" href="">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__btn social__btn_fb" href="">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__btn social__btn_vk" href="">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__info info-links">
+            <li class="info-links__item">
+              <a class="link link_light" href="">
+                <b class="info-links__item_special">Для поставщиков</b>
+              </a>
+            </li>
+            <li class="info-links__item">
+              <a class="link link_light" href="">О производстве</a>
+            </li>
+            <li class="info-links__item">
+              <a class="link link_light" href="">Наши документы</a>
+            </li>
+            <li class="info-links__item">
+              <a class="link link_light" href="">Экологические стандарты</a>
+            </li>
+          </ul>
+          <div class="footer__copyright copyright">
+            <img class="copyright__logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
+            <p class="copyright__text">Сделано в
+              <a class="copyright__link link link_light" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+              © 2017</p>
+          </div>
         </footer>
       </div>
     </div>

@@ -18,9 +18,8 @@ a {
 /*Глобальные стили элементы*/
 @font-face {
   font-family: "Roboto", "Arial", sans-serif;
-
   font-display: optional;
-  src: url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic");
+  src: url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic");
 }
 
 body {
@@ -66,7 +65,9 @@ body {
   white-space: nowrap;
   border: 0;
   clip: rect(0 0 0 0);
-  clip-path: inset(100%);
+          clip-path: inset(100%);
+
+  -webkit-clip-path: inset(100%);
 }
 
 .page-btn {
@@ -618,6 +619,7 @@ body {
   position: relative;
   display: inline-block;
   font-size: 13px;
+  vertical-align: middle;
 }
 
 .form-auth__link:last-of-type {
@@ -749,7 +751,8 @@ body {
   display: block;
   margin: 0 auto;
 
-  object-fit: none;
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 .slider__background {
@@ -964,8 +967,10 @@ body {
   display: inline-block;
   width: 28px;
   height: 33px;
+  vertical-align: baseline;
   background-image: url("../img/ruble.svg");
-  filter: drop-shadow(1px 1px 2px rgba(49, 50, 53, 0.5));
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(49, 50, 53, 0.5));
+          filter: drop-shadow(1px 1px 2px rgba(49, 50, 53, 0.5));
 }
 
 .product__photo {
@@ -1055,7 +1060,7 @@ body {
 .blog-post__link {
   font-weight: 700;
   font-size: 24px;
-  line-height: 31px;
+  line-height: 32px;
   white-space: pre-wrap;
   background-color: rgba(255, 255, 255, 0.7);
   border-bottom: 2px solid #323232;
@@ -1073,6 +1078,7 @@ body {
   padding: 6px;
   font-size: 16px;
   line-height: 22px;
+  background-color: #fe9e90;
   background-image: repeating-linear-gradient(135deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
 }
 
@@ -1414,7 +1420,8 @@ body {
 }
 
 .toggle:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .filter__list {
@@ -1628,7 +1635,8 @@ body {
   background-image: url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .page-list {
@@ -1729,8 +1737,11 @@ body {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
-  column-count: 2;
-  column-gap: 10px;
+          column-count: 2;
+          column-gap: 10px;
+
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
 }
 
 .info-links__item {
@@ -1767,18 +1778,53 @@ body {
   padding: 0;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
   }
   70% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   90% {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -1794,29 +1840,56 @@ body {
   }
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   10%,
   30%,
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
 .modal-overlay {
   display: block;
-  animation: fade 0.6s;
+  -webkit-animation: fade 0.6s;
+          animation: fade 0.6s;
 }
 
 .modal-overlay::before {
@@ -1834,9 +1907,11 @@ body {
 
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .modal-error {
-  animation: shake 0.5s;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
 }
