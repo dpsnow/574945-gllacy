@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес.">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Gllacy Shop</title>
   </head>
   <body>
@@ -71,8 +71,8 @@
                       <div class="form-auth__footer">
                         <input class="form-auth__submit-btn page-btn" type="submit" value="Войти">
                         <ul class="form-auth__list-links">
-                          <li><a class="form-auth__link link link_dark" href="#">Забыли пароль?</a></li>
-                          <li><a class="form-auth__link link link_dark" href="#">Новая регистрация</a></li>
+                          <li><a class="form-auth__link" href="#">Забыли пароль?</a></li>
+                          <li><a class="form-auth__link" href="#">Новая регистрация</a></li>
                         </ul>
                       </div>
                     </form>
@@ -87,7 +87,6 @@
           <div class="header__footer">
             <p class="header__contacts contacts">
               С 10 до 20, ежедневно
-              <br>
               <span class="contacts__phone">8 812 450-25-25</span>
             </p>
           </div>
@@ -238,8 +237,7 @@
                   Адрес главного офиса
                   <br> и офлайн-магазина:
                 </p>
-                <div class="location__text location__text_size_l">ул. Большая Конюшенная
-                  <br>19/8, Санкт-Петербург</div>
+                <div class="location__text location__text_size_l">ул. Большая Конюшенная 19/8, Санкт-Петербург</div>
               </div>
               <div class="location__item">
                 <p class="location__text">Для заказов по телефону:</p>
@@ -248,7 +246,7 @@
                   (с 10 до 20 ежедневно)
                 </div>
               </div>
-              <button class="location__btn page-btn" type="button">Форма обратной связи</button>
+              <a class="location__btn page-btn" href="writeus.html" type="button">Форма обратной связи</a>
               <div class="modal">
                 <div class="feedback-modal">
                   <p class="feedback-modal__title">Мы обязательно вам ответим!</p>
@@ -266,7 +264,7 @@
                     <label>
                       <span class="visually-hidden">Ваше сообщение</span>
                       <textarea class="form-feedback__field form-field form-feedback__message" name="feedback-message" placeholder="Напишите что-нибудь..."
-                        cols="7" rows="7" required></textarea>
+                        cols="18" rows="6" required></textarea>
                     </label>
                     <input class="form-feedback__btn page-btn" type="submit" value="Отправить">
                   </form>
@@ -318,7 +316,9 @@
             </li>
           </ul>
           <div class="footer__copyright copyright">
-            <img class="copyright__logo" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
+            </a>
             <p class="copyright__text">Сделано в
               <a class="copyright__link link link_light" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
               © 2017</p>
@@ -327,7 +327,6 @@
       </div>
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/location-map.min.js" type="text/javascript"></script>
-    <script src="js/modal-show.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
   </body>
 </html>
