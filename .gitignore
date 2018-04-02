@@ -9,6 +9,16 @@ node_modules/
 npm-debug.*
 Thumbs.db
 Q&A+TODO.html
-css/style.scss
 js/2-location-map.js
+js/location-map.js
+js/location-map.min.js
+js/modal-show.js
+js/modal-show.min.js
+js/range-control.js
+js/range-control.min.js
+css/style.scss
 css/style.css.map
+css/normalize.css
+csscomb.json
+.vscode/settings.json
+.stylelintrc
