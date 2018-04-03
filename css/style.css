@@ -1193,11 +1193,12 @@ body {
 }
 
 .location__text_phone {
-  margin-top: 7px;
+  margin-top: 5px;
   line-height: 22px;
 }
 
 .location__address {
+  margin-top: 3px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
