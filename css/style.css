@@ -59,9 +59,8 @@ body {
   white-space: nowrap;
   border: 0;
   clip: rect(0 0 0 0);
-          clip-path: inset(100%);
-
   -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
 }
 
 .page-btn {
@@ -99,6 +98,7 @@ body {
   min-width: 280px;
   min-height: 64px;
   font-size: 32px;
+  line-height: 44px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   border-radius: 40px;
 }
@@ -161,7 +161,10 @@ body {
   min-height: 43px;
   padding: 2px 15px;
   font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
   font-family: inherit;
+  color: inherit;
   border-width: 0;
   border-radius: 5px;
   box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
@@ -600,10 +603,17 @@ body {
   padding-left: 19px;
 }
 
+.form-search {
+  font-size: 14px;
+  line-height: 24px;
+  color: #323232;
+}
+
 .form-auth__field {
   margin-bottom: 20px;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
+  color: #323232;
 }
 
 .form-auth__footer {
@@ -761,6 +771,7 @@ body {
   margin: 0 auto;
 
   -o-object-fit: none;
+
      object-fit: none;
 }
 
@@ -957,13 +968,13 @@ body {
 
 .product__price {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 7px;
+  left: -1px;
   margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 45px;
-  line-height: 1.5;
+  line-height: 45px;
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(49, 50, 53, 0.5);
 }
@@ -1128,6 +1139,9 @@ body {
 
 .subscribe_field {
   min-width: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #323232;
 }
 
 .location {
@@ -1171,28 +1185,35 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  line-height: 1.43;
+  line-height: 20px;
 }
 
-.location__text_size_l {
+.location__text_adres {
+  width: 150px;
+}
+
+.location__text_phone {
+  margin-top: 7px;
+  line-height: 22px;
+}
+
+.location__address {
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 24px;
 }
 
 .location__phone {
-  margin-top: 3px;
-  line-height: 1.57;
-  color: inherit;
-  text-decoration: none;
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .location__btn {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   min-width: 252px;
   margin-top: auto;
-
-  -ms-grid-row-align: center;
 }
 
 .features__content {
@@ -1293,6 +1314,7 @@ body {
   margin-bottom: 18px;
   font-size: 16px;
   line-height: 1.5;
+  color: #323232;
 }
 
 .form-feedback__btn {
@@ -1396,74 +1418,6 @@ body {
   box-shadow: inset 0 2px 1px 0 #696969;
 }
 
-.price-range {
-  flex-shrink: 0;
-  width: 220px;
-}
-
-.price-range__legend {
-  padding-right: 10px;
-}
-
-.price-range__value {
-  width: 30px;
-  margin: 0;
-  padding: 0;
-  font-weight: inherit;
-  font-size: inherit;
-  font-family: inherit;
-  text-align: center;
-  color: inherit;
-  background-color: transparent;
-  border: none;
-}
-
-.price-range_controls {
-  position: relative;
-}
-
-.price-range__scale {
-  width: 100%;
-  height: 4px;
-  background-color: rgba(248, 247, 244, 0.5);
-}
-
-.price-range__bar {
-  position: relative;
-  left: 35px;
-  width: 50%;
-  height: 4px;
-  background-color: #f8f7f4;
-}
-
-.price-range__control {
-  position: absolute;
-  top: 8px;
-}
-
-.price-range__control_min {
-  left: 35px;
-}
-
-.price-range__control_max {
-  right: 65px;
-}
-
-.toggle {
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  background-color: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.toggle:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .filter__list {
   display: flex;
   justify-content: space-between;
@@ -1515,6 +1469,76 @@ body {
 .filter__list option {
   font-size: 14px;
   color: #323232;
+}
+
+.price-range {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.price-range__legend {
+  padding-right: 10px;
+}
+
+.price-range__value {
+  width: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.price-range_controls {
+  position: relative;
+  padding-right: 23px;
+  padding-left: 23px;
+}
+
+.price-range__scale {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.price-range__bar {
+  position: relative;
+  left: 25px;
+  width: 50%;
+  height: 4px;
+  background-color: #f8f7f4;
+}
+
+.price-range__control {
+  position: absolute;
+  top: 8px;
+}
+
+.price-range__control_min {
+  left: 35px;
+}
+
+.price-range__control_max {
+  right: 68px;
+}
+
+.toggle {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .select-wrap {
