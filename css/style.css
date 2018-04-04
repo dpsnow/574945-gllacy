@@ -69,7 +69,7 @@ body {
   padding: 10px 20px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 24px;
   font-family: inherit;
   vertical-align: middle;
   text-align: center;
@@ -247,7 +247,7 @@ body {
   padding: 6px 14px 7px 14px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.13;
+  line-height: 18px;
 }
 
 .button_view_link:hover,
@@ -281,7 +281,7 @@ body {
   padding: 7px 16px;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 16px;
   background-color: rgba(255, 255, 255, 0.2);
   border-width: 0;
 }
@@ -475,7 +475,7 @@ body {
   list-style: none;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 16px;
   color: #323232;
   white-space: nowrap;
   background-color: #f8f7f4;
@@ -536,7 +536,7 @@ body {
   padding: 0;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 16px;
   text-align: right;
   color: #ffffff;
 }
@@ -545,7 +545,7 @@ body {
   display: block;
   margin-top: 3px;
   font-size: 22px;
-  line-height: 1.09;
+  line-height: 24px;
   color: inherit;
   text-decoration: none;
   white-space: nowrap;
@@ -557,7 +557,7 @@ body {
   padding: 0;
   list-style: none;
   font-size: 14px;
-  line-height: 1.13;
+  line-height: 16px;
   color: #ffffff;
 }
 
@@ -636,7 +636,7 @@ body {
   position: relative;
   display: inline-block;
   font-size: 13px;
-  line-height: 1.61;
+  line-height: 21px;
   vertical-align: middle;
   color: #323232;
 }
@@ -659,7 +659,7 @@ body {
 .order {
   border-collapse: collapse;
   font-size: 13px;
-  line-height: 1.23;
+  line-height: 16px;
 }
 
 .order__cell {
@@ -699,7 +699,7 @@ body {
 .order__total {
   font-weight: 700;
   font-size: 15px;
-  line-height: 1.2;
+  line-height: 18px;
 }
 
 .order__total .order__row {
@@ -760,12 +760,14 @@ body {
 .slide__img {
   position: absolute;
   right: 0;
-  bottom: -60px;
+  bottom: -61px;
   left: 0;
   z-index: -1;
   display: block;
   margin: 0 auto;
+
   -o-object-fit: none;
+
      object-fit: none;
 }
 
@@ -782,7 +784,7 @@ body {
 
 .slider__indicators-list {
   position: absolute;
-  bottom: 24px;
+  bottom: 23px;
   display: flex;
   flex-shrink: 1;
 }
@@ -860,6 +862,7 @@ body {
   align-items: flex-start;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .hit-products__item {
@@ -936,7 +939,7 @@ body {
   padding: 0 5px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.38;
+  line-height: 22px;
   text-align: center;
   color: #ffffff;
 }
@@ -962,7 +965,7 @@ body {
 
 .product__price {
   position: absolute;
-  bottom: 7px;
+  bottom: 8px;
   left: -1px;
   margin: 0;
   padding: 0;
@@ -1035,14 +1038,14 @@ body {
 .promo__title {
   margin: 0 0 16px 0;
   font-size: 35px;
-  line-height: 1.17;
+  line-height: 41px;
 }
 
 .promo__text {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  line-height: 1.22;
+  line-height: 22px;
 }
 
 .promo__btn {
@@ -1071,7 +1074,8 @@ body {
   display: block;
   margin-bottom: 5px;
   font-weight: 500;
-  line-height: 1.38;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .blog-post__title {
@@ -1083,7 +1087,7 @@ body {
 .blog-post__link {
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.25;
+  line-height: 30px;
   text-decoration: underline;
   white-space: pre-wrap;
   background-color: rgba(255, 255, 255, 0.7);
@@ -1099,7 +1103,7 @@ body {
   min-height: 220px;
   padding: 6px;
   font-size: 16px;
-  line-height: 1.38;
+  line-height: 22px;
   background-color: #fe9e90;
   background-image: repeating-linear-gradient(135deg, #f8f7f4 0, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
 }
@@ -1117,8 +1121,6 @@ body {
 .subscribe__text {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: 1.38;
   color: #5a5a5a;
 }
 
@@ -1136,7 +1138,7 @@ body {
   width: auto;
   min-width: 30px;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 24px;
   color: #323232;
 }
 
@@ -1209,10 +1211,10 @@ body {
 }
 
 .location__btn {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   min-width: 252px;
   margin-top: auto;
-  -ms-grid-row-align: center;
 }
 
 .features__content {
@@ -1233,7 +1235,7 @@ body {
   padding: 0;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.25;
+  line-height: 30px;
   letter-spacing: 0.15px;
 }
 
@@ -1250,7 +1252,7 @@ body {
   max-width: 49%;
   padding: 13px 8px 10px 58px;
   font-size: 16px;
-  line-height: 1.38;
+  line-height: 22px;
   background-repeat: no-repeat;
 }
 
@@ -1298,7 +1300,7 @@ body {
   padding: 0;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.16;
+  line-height: 28px;
 }
 
 .form-feedback__contact {
@@ -1314,7 +1316,7 @@ body {
   max-width: 100%;
   margin-bottom: 18px;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 24px;
   color: #323232;
 }
 
@@ -1343,9 +1345,9 @@ body {
 
 .catalog__title {
   margin-top: 3px;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   font-size: 35px;
-  line-height: 1.17;
+  line-height: 42px;
 }
 
 .catalog__result {
@@ -1354,7 +1356,7 @@ body {
 
 .catalog__filters {
   max-width: 860px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .form-filters__inner {
@@ -1380,11 +1382,11 @@ body {
   top: -1px;
   left: 15px;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   padding: 0;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 16px;
   color: inherit;
   white-space: nowrap;
 }
@@ -1398,6 +1400,7 @@ body {
   padding: 5px 15px;
   font-weight: 700;
   font-size: 16px;
+  line-height: 18px;
   font-family: inherit;
   color: inherit;
   white-space: nowrap;
@@ -1435,9 +1438,10 @@ body {
   min-width: 194px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.13;
+  line-height: 18px;
   color: #ffffff;
   letter-spacing: 0.2px;
+
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1487,6 +1491,7 @@ body {
   padding: 0;
   font-weight: inherit;
   font-size: inherit;
+  line-height: inherit;
   font-family: inherit;
   text-align: center;
   color: inherit;
@@ -1571,6 +1576,7 @@ body {
   padding-left: 30px;
   font-weight: 400;
   font-size: 16px;
+  line-height: 18px;
   color: #ffffff;
   white-space: nowrap;
 }
@@ -1656,7 +1662,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 81px;
   padding: 0;
 }
 
@@ -1727,7 +1733,7 @@ body {
   padding: 4px 8px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.13;
+  line-height: 18px;
   color: #ffffff;
   white-space: nowrap;
   border-radius: 27px;
@@ -1813,7 +1819,7 @@ body {
   list-style: none;
   font-weight: 400;
   font-size: 13px;
-  line-height: 1.38;
+  line-height: 18px;
   color: #ffffff;
 }
 
@@ -1855,7 +1861,7 @@ body {
 .copyright {
   min-width: 190px;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 18px;
   color: #ffffff;
 }
 
