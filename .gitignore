@@ -15,3 +15,9 @@ csscomb.json
 .stylelintrc
 css/style.css.map
 css/style.scss
+js/range-control.min.js
+js/range-control.js
+js/modal-show.min.js
+js/modal-show.js
+js/location-map.min.js
+js/location-map.js
